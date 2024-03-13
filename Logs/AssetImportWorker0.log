@@ -364,3 +364,13 @@ Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, a
 To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 667
 
+========================================================================
+Received Import Request.
+  Time since last request: 2878.226601 seconds.
+  path: Assets/block_metropole.prefab
+  artifactKey: Guid(2fb79ee2591ffba46b41046511295505) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/block_metropole.prefab using Guid(2fb79ee2591ffba46b41046511295505) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f2390428906de5ffa6b4e3d476a76678') in 0.1963942 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 741
+
