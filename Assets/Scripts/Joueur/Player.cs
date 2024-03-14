@@ -21,7 +21,6 @@ public class player : MonoBehaviour {
     private void Update() {
         if (canMove)
         {
-
             // Récupère le vecteur de déplacement normalisé du gameInput
             Vector2 inputVector = gameInput.GetMovementVectorNormalized();
 
