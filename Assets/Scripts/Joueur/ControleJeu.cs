@@ -10,7 +10,7 @@ public class ControleJeu : MonoBehaviour {
     [SerializeField] private float forceSaut = 5f;
 
     // Distance de vérification pour déterminer si le joueur est au sol
-    [SerializeField] private float distanceSol = 0.1f;
+    [SerializeField] private float groundCheckDistance = 0.1f;
 
     public player scriptJoueur;
 
@@ -41,9 +41,9 @@ public class ControleJeu : MonoBehaviour {
         joueurRigidBody = GetComponent<Rigidbody>();
 
         // Associer la méthode SprintStarted à l'action de sprint (au début de la pression)
-        playerInputActions.Player.Sprint.started += SprintDebute;
+        playerInputActions.Player.Sprint.started += SprintStarted;
         // Associer la méthode SprintCanceled à l'action de sprint (à la fin de la pression)
-        playerInputActions.Player.Sprint.canceled += SprintCanceler;
+        playerInputActions.Player.Sprint.canceled += SprintCanceled;
 
         //movement original
         mouvementOrigine = scriptJoueur.vitesseDeplacement;
@@ -64,14 +64,14 @@ public class ControleJeu : MonoBehaviour {
     // Méthode appelée à chaque frame physique
     private void FixedUpdate() {
         // Effectuer une vérification au sol
-        toucheSol = SiToucheSol();
+        toucheSol = GroundCheck();
     }
 
     // Vérifie si le joueur est au sol
-    private bool SiToucheSol() {
+    private bool GroundCheck() {
         // Lance un rayon vers le bas pour vérifier si le joueur est au sol si le rayon touche le sol cela veut dire que le joueur touche le sol
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, distanceSol)) {
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, groundCheckDistance)) {
             return true; // Le joueur est au sol si le rayon touche un collider dans groundCheckDistance
         }
         //le rayon ne touche rien le joueur n'est pas au sol
@@ -79,10 +79,10 @@ public class ControleJeu : MonoBehaviour {
     }
 
     // Méthode pour gérer le saut du joueur
-    public void Saut(InputAction.CallbackContext context) {
+    public void Jump(InputAction.CallbackContext context) {
         // Vérifie si l'entrée de saut est effectuée et si le joueur est au sol
         if (context.performed && toucheSol) {
-            // Debug.Log("saut");
+            // Debug.Log("jump");
             // force pour faire sauter
             joueurRigidBody.AddForce(Vector3.up * forceSaut, ForceMode.Impulse);
         }
@@ -90,7 +90,7 @@ public class ControleJeu : MonoBehaviour {
 
     // Méthode pour gérer le sprint du joueur
     // Méthode appelée lorsque le sprint commence
-    public void SprintDebute(InputAction.CallbackContext context) {
+    public void SprintStarted(InputAction.CallbackContext context) {
         joueurSprint = true; // Marquer que le joueur sprinte
         Debug.Log("Début sprint");
         // Increase moveSpeed using the player script reference
@@ -100,7 +100,7 @@ public class ControleJeu : MonoBehaviour {
         }
     }
     // Méthode appelée lorsque le sprint se termine
-    public void SprintCanceler(InputAction.CallbackContext context) {
+    public void SprintCanceled(InputAction.CallbackContext context) {
         joueurSprint = false; // Marquer que le joueur a arrêté de sprinter
         Debug.Log("Sprint Fin");
 
@@ -110,7 +110,7 @@ public class ControleJeu : MonoBehaviour {
     }
 
     // Méthode pour obtenir le vecteur de mouvement normalisé du joueur
-    public Vector2 ObtenirVecteurMouvementNormaliser() {
+    public Vector2 GetMovementVectorNormalized() {
         Vector2 inputVector = playerInputActions.Player.Move.ReadValue<Vector2>();
         inputVector = inputVector.normalized;
         return inputVector;

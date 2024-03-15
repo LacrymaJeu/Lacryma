@@ -13,7 +13,7 @@ public class player : MonoBehaviour {
     public float vitesseDeplacement = 7f;
 
     // Référence à l'input du jeu
-    [SerializeField] private ControleJeu gameInput;
+    [SerializeField] private ControleJeu gameInput; // La variable doit être en anglais
 
     // Indique si le joueur est en train de marcher
     private bool marche;
@@ -24,7 +24,7 @@ public class player : MonoBehaviour {
         if (peutBouger)
         {
             // Récupère le vecteur de déplacement normalisé du gameInput
-            Vector2 inputVector = gameInput.ObtenirVecteurMouvementNormaliser();
+            Vector2 inputVector = gameInput.GetMovementVectorNormalized(); // Variable doit être en anglais
 
             // Convertit le vecteur d'input en espace monde relatif à la caméra
             Vector3 camForward = Vector3.Scale(cam.forward, new Vector3(1, 0, 1)).normalized;
