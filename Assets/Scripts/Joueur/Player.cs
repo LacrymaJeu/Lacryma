@@ -2,44 +2,54 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Contrôle la logique du joueur
+
 public class player : MonoBehaviour {
 
     // Référence à la caméra
     public Transform cam;
 
     // Vitesse de déplacement du joueur
-    [SerializeField] private float moveSpeed = 7f;
+    public float vitesseDeplacement = 7f;
 
     // Référence à l'input du jeu
-    [SerializeField] private gameInput gameInput;
+    [SerializeField] private ControleJeu gameInput; // La variable doit être en anglais
 
     // Indique si le joueur est en train de marcher
-    private bool isWalking;
+    private bool marche;
+
+    public static bool peutBouger = true;
 
     private void Update() {
-        // Récupère le vecteur de déplacement normalisé du gameInput
-        Vector2 inputVector = gameInput.GetMovementVectorNormalized();
+        if (peutBouger)
+        {
+            // Récupère le vecteur de déplacement normalisé du gameInput
+            Vector2 inputVector = gameInput.GetMovementVectorNormalized(); // Variable doit être en anglais
 
-        // Convertit le vecteur d'input en espace monde relatif à la caméra
-        Vector3 camForward = Vector3.Scale(cam.forward, new Vector3(1, 0, 1)).normalized;
-        Vector3 moveDir = camForward * inputVector.y + cam.right * inputVector.x;
+            // Convertit le vecteur d'input en espace monde relatif à la caméra
+            Vector3 camForward = Vector3.Scale(cam.forward, new Vector3(1, 0, 1)).normalized;
+            Vector3 moveDir = camForward * inputVector.y + cam.right * inputVector.x;
 
-        // Applique le déplacement
-        transform.position += moveDir * moveSpeed * Time.deltaTime;
+            // Applique le déplacement
+            transform.position += moveDir * vitesseDeplacement * Time.deltaTime;
 
-        // Oriente le joueur vers la direction de la caméra
-        if (moveDir.magnitude > 0.1f) {
-            Quaternion targetRotation = Quaternion.LookRotation(moveDir, Vector3.up);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
+            // Oriente le joueur vers la direction de la caméra
+            if (moveDir.magnitude > 0.1f)
+            {
+                Quaternion targetRotation = Quaternion.LookRotation(moveDir, Vector3.up);
+                transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
+            }
+
+            // Gestion de l'animation
+            marche = moveDir != Vector3.zero;
+        } else
+        {
+            marche = false;
         }
-
-        // Gestion de l'animation
-        isWalking = moveDir != Vector3.zero;
     }
 
     // verification si le joueur marche ou pas
     public bool IsWalking() {
-        return isWalking;
+        return marche;
     }
-
 }
