@@ -8,7 +8,7 @@ public class player : MonoBehaviour {
     public Transform cam;
 
     // Vitesse de déplacement du joueur
-    [SerializeField] private float moveSpeed = 7f;
+    public float moveSpeed = 7f;
 
     // Référence à l'input du jeu
     [SerializeField] private gameInput gameInput;
@@ -41,5 +41,8 @@ public class player : MonoBehaviour {
     public bool IsWalking() {
         return isWalking;
     }
+    public void Sprint() {
+        Debug.Log("wesh");
 
+    }
 }
