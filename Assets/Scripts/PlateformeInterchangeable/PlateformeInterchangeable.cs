@@ -6,11 +6,11 @@ using UnityEngine;
 
 public class PlateformeInterchangeable : MonoBehaviour
 {
-    public KeyCode toggleKey = KeyCode.Q;
+    public KeyCode toggleCle = KeyCode.Q;
     public GameObject[] visibleObjects;
     public GameObject[] invisibleObjects;
 
-    private bool isVisible = true;
+    private bool Visible = true;
 
     void Start()
     {
@@ -19,9 +19,9 @@ public class PlateformeInterchangeable : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(toggleKey))
+        if (Input.GetKeyDown(toggleCle))
         {
-            isVisible = !isVisible;
+            Visible = !Visible;
             SetObjectsVisibility();
         }
     }
@@ -30,12 +30,12 @@ public class PlateformeInterchangeable : MonoBehaviour
     {
         foreach (GameObject obj in visibleObjects)
         {
-            obj.SetActive(isVisible);
+            obj.SetActive(Visible);
         }
 
         foreach (GameObject obj in invisibleObjects)
         {
-            obj.SetActive(!isVisible);
+            obj.SetActive(!Visible);
         }
     }
 }

@@ -8,9 +8,9 @@ using UnityEngine.Events;
 public class Laser : MonoBehaviour
 {
 
-    [SerializeField] private LineRenderer ligneRenderer; // Visualise laser
+    [SerializeField] private LineRenderer renduLigne; // Visualise laser
     [SerializeField] private float laserDistance = 8f; // Distance maximale du laser
-    [SerializeField] private LayerMask ignoreMask; // Ignorer au lancement du laser
+    [SerializeField] private LayerMask ignoreMasque; // Ignorer au lancement du laser
     [SerializeField] private UnityEvent cibleToucher; // Lorsque le laser touche une cible
 
     private RaycastHit rayFrapper;
@@ -18,7 +18,7 @@ public class Laser : MonoBehaviour
 
     private void Start()
     {
-        ligneRenderer.positionCount = 2; // Point de départ et fin
+        renduLigne.positionCount = 2; // Point de départ et fin
     }
 
     private void Update()
@@ -26,11 +26,11 @@ public class Laser : MonoBehaviour
         ray = new(transform.position, transform.forward);
 
         // Vérifie si sa touche quelque chose qui n'est pas ignoré
-        if (Physics.Raycast(ray, out rayFrapper, laserDistance, ~ignoreMask))
+        if (Physics.Raycast(ray, out rayFrapper, laserDistance, ~ignoreMasque))
         {
             // Visualiser le laser qui touche un objet
-            ligneRenderer.SetPosition(0, transform.position);
-            ligneRenderer.SetPosition(1, rayFrapper.point);
+            renduLigne.SetPosition(0, transform.position);
+            renduLigne.SetPosition(1, rayFrapper.point);
             if (rayFrapper.collider.TryGetComponent(out LaserCible cible))
             {
                 cible.Toucher(); // Appelle la fonction de l'autre script
@@ -40,8 +40,8 @@ public class Laser : MonoBehaviour
         // Visualiser le laser qui atteint sa distance maximale
         else
         {
-            ligneRenderer.SetPosition(0, transform.position);
-            ligneRenderer.SetPosition(1, transform.position + transform.forward * laserDistance);
+            renduLigne.SetPosition(0, transform.position);
+            renduLigne.SetPosition(1, transform.position + transform.forward * laserDistance);
         }
     }
 

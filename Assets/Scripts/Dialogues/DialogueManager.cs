@@ -32,7 +32,7 @@ public class DialogueManager : MonoBehaviour
     public void DialogueStart(List<dialogueString> textToPrint, Transform NPC)
     {
         dialogueParent.SetActive(true);
-        player.canMove = false;
+        player.peutBouger = false;
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
@@ -103,7 +103,7 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = "";
         dialogueParent.SetActive(false);
 
-        player.canMove = true;
+        player.peutBouger = true;
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
