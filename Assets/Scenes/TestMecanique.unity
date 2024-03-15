@@ -373,7 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f81804b03d7b2b24da40faa83e563916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toggleKey: 113
+  toggleCle: 113
   visibleObjects:
   - {fileID: 654925252}
   invisibleObjects:
@@ -874,39 +874,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueStrings:
-  - text: Allo!!!
-    isEnd: 0
+  - texte: Allo!!!!
+    laFin: 0
     startDialogueEvent:
       m_PersistentCalls:
         m_Calls: []
     endDialogueEvent:
       m_PersistentCalls:
         m_Calls: []
-  - text: J'espere que je marche!!!
-    isEnd: 0
+  - texte: C'est une belle journee!!!
+    laFin: 0
     startDialogueEvent:
       m_PersistentCalls:
         m_Calls: []
     endDialogueEvent:
       m_PersistentCalls:
         m_Calls: []
-  - text: Comment va tu?
-    isEnd: 0
+  - texte: Comment va tu?
+    laFin: 0
     startDialogueEvent:
       m_PersistentCalls:
         m_Calls: []
     endDialogueEvent:
       m_PersistentCalls:
         m_Calls: []
-  - text: Si tu vois se message on est content
-    isEnd: 1
+  - texte: Si tu vois ce texte on est content! Maintenant je vais terminer
+    laFin: 1
     startDialogueEvent:
       m_PersistentCalls:
         m_Calls: []
     endDialogueEvent:
       m_PersistentCalls:
         m_Calls: []
-  NPCTransform: {fileID: 1401015650}
+  pourCameraNPC: {fileID: 1401015650}
 --- !u!65 &784592395
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1348,8 +1348,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueParent: {fileID: 1270513146}
   dialogueText: {fileID: 1861870731}
-  typingSpeed: 0.05
-  turnSpeed: 2
+  vitesseEcriture: 0.05
+  vitesseTourne: 2
 --- !u!1 &1136105194
 GameObject:
   m_ObjectHideFlags: 0
@@ -1400,7 +1400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1189948888}
-  moveSpeed: 3
+  vitesseDeplacement: 7
   gameInput: {fileID: 1409184788}
 --- !u!114 &1136105197
 MonoBehaviour:
@@ -1426,8 +1426,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c8c097640976254c941fee88fbabdfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 5
+  forceSaut: 5
   groundCheckDistance: 1.1
+  scriptJoueur: {fileID: 0}
 --- !u!54 &1136105199
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2224,8 +2225,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c8c097640976254c941fee88fbabdfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 5
+  forceSaut: 5
   groundCheckDistance: 0.1
+  scriptJoueur: {fileID: 0}
 --- !u!4 &1409184789
 Transform:
   m_ObjectHideFlags: 0
