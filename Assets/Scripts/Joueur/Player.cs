@@ -10,7 +10,7 @@ public class player : MonoBehaviour {
     public Transform cam;
 
     // Vitesse de déplacement du joueur
-    public float vitesseDeplacement = 7f;
+    public float moveSpeed = 7f;
 
     // Référence à l'input du jeu
     [SerializeField] private ControleJeu gameInput; // La variable doit être en anglais
@@ -31,7 +31,7 @@ public class player : MonoBehaviour {
             Vector3 moveDir = camForward * inputVector.y + cam.right * inputVector.x;
 
             // Applique le déplacement
-            transform.position += moveDir * vitesseDeplacement * Time.deltaTime;
+            transform.position += moveDir * moveSpeed * Time.deltaTime;
 
             // Oriente le joueur vers la direction de la caméra
             if (moveDir.magnitude > 0.1f)
