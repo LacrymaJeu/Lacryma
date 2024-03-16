@@ -46,7 +46,7 @@ public class ControleJeu : MonoBehaviour {
         playerInputActions.Player.Sprint.canceled += SprintCanceled;
 
         //movement original
-        mouvementOrigine = scriptJoueur.vitesseDeplacement;
+        mouvementOrigine = scriptJoueur.moveSpeed;
     }
 
 
@@ -54,7 +54,7 @@ public class ControleJeu : MonoBehaviour {
         // regard si le joueur touche le sol apres le sprint
         if (scriptJoueur != null && !joueurSprint && !touchaitSol && toucheSol) {
             // revien au movement original quand le joueur touche le sol
-            scriptJoueur.vitesseDeplacement = mouvementOrigine;
+            scriptJoueur.moveSpeed = mouvementOrigine;
         }
 
         // Update the flag indicating whether the player was grounded in the previous frame
@@ -95,7 +95,7 @@ public class ControleJeu : MonoBehaviour {
         Debug.Log("Début sprint");
         // Increase moveSpeed using the player script reference
         if (toucheSol && scriptJoueur != null) {
-                scriptJoueur.vitesseDeplacement += 2; // moveSpeed +2
+                scriptJoueur.moveSpeed += 2; // moveSpeed +2
             
         }
     }
@@ -105,7 +105,7 @@ public class ControleJeu : MonoBehaviour {
         Debug.Log("Sprint Fin");
 
         if (scriptJoueur != null && toucheSol) { 
-                scriptJoueur.vitesseDeplacement = mouvementOrigine; //retourne a sa valeur initial
+                scriptJoueur.moveSpeed = mouvementOrigine; //retourne a sa valeur initial
         }
     }
 
