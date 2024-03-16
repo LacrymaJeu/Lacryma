@@ -10,7 +10,7 @@ public class player : MonoBehaviour {
     public Transform cam;
 
     // Vitesse de déplacement du joueur
-    public float moveSpeed = 7f;
+    public float moveSpeed = 7f; // Si tu change le nom de cette variable en anglais sa cause des problemes de sprint. Trouve pourquoi!
 
     // Référence à l'input du jeu
     [SerializeField] private ControleJeu gameInput; // La variable doit être en anglais
