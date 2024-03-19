@@ -2,31 +2,39 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Permet le joueur de ramasser un objet si il est tenable en pesant "E"
+// Permet le joueur de ramasser des objets dans la scène
 
-public class JoueurRamasseLache : MonoBehaviour {
+public class JoueurRamasseLache : MonoBehaviour
+{
 
 
-    [SerializeField] private Transform joueurCameraTransformer;
-    [SerializeField] private Transform objetPointDeTransformation;
-    [SerializeField] private LayerMask ramasserLayerMasque; // Les layers
+    [SerializeField] private Transform joueurCameraTransform;
+    [SerializeField] private Transform objetDistancePourRamasser;
+    [SerializeField] private LayerMask masquePourRamasser;
 
     private ObjetTenable objetTenable;
 
-    private void Update() {
-        if (Input.GetKeyDown(KeyCode.E)) {
-            if (objetTenable == null) {
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            if (objetTenable == null)
+            {
                 // Not carrying an object, try to grab
-                float ramasserDistance = 4f;
-                if (Physics.Raycast(joueurCameraTransformer.position, joueurCameraTransformer.forward, out RaycastHit raycastHit, ramasserDistance, ramasserLayerMasque)) {
-                    Debug.Log(raycastHit.transform);
-                    if (raycastHit.transform.TryGetComponent(out objetTenable)) {
-                        objetTenable.Prendre(objetPointDeTransformation);
+                float ramasseDistance = 4f;
+                if (Physics.Raycast(joueurCameraTransform.position, joueurCameraTransform.forward, out RaycastHit raycastFrapper, ramasseDistance, masquePourRamasser))
+                {
+                    Debug.Log(raycastFrapper.transform);
+                    if (raycastFrapper.transform.TryGetComponent(out objetTenable))
+                    {
+                        objetTenable.Prendre(objetDistancePourRamasser);
                     }
                 }
-            } else {
+            }
+            else
+            {
                 // Currently carrying something, drop
-                objetTenable.Lache();
+                objetTenable.Lacher();
                 objetTenable = null;
             }
         }

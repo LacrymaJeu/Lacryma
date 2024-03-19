@@ -2,33 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Logique pour que le joueur peut tenir l'objet
+// Décide si un objet dans la scène peut être ramasser par le joueur.
+// Si le script est sur un objet le joueur peut le ramasser.
 
 public class ObjetTenable : MonoBehaviour {
 
 
-    private Rigidbody objectRigidbody;
-    private Transform objectGrabPointTransform;
+    private Rigidbody objetRigidbody;
+    private Transform objetPrendrePointTransformation;
 
     private void Awake() {
-        objectRigidbody = GetComponent<Rigidbody>();
+        objetRigidbody = GetComponent<Rigidbody>();
     }
 
-    public void Prendre(Transform objectGrabPointTransform) {
-        this.objectGrabPointTransform = objectGrabPointTransform;
-        objectRigidbody.useGravity = false;
+    public void Prendre(Transform objetPrendrePointTransformation) {
+        this.objetPrendrePointTransformation = objetPrendrePointTransformation;
+        objetRigidbody.useGravity = false;
     }
 
-    public void Lache() {
-        this.objectGrabPointTransform = null;
-        objectRigidbody.useGravity = true;
+    public void Lacher() {
+        this.objetPrendrePointTransformation = null;
+        objetRigidbody.useGravity = true;
     }
 
     private void FixedUpdate() {
-        if (objectGrabPointTransform != null) {
-            float lerpSpeed = 10f;
-            Vector3 newPosition = Vector3.Lerp(transform.position, objectGrabPointTransform.position, Time.deltaTime * lerpSpeed);
-            objectRigidbody.MovePosition(newPosition);
+        if (objetPrendrePointTransformation != null) {
+            float lerpVitesse = 10f;
+            Vector3 nouvellePosition = Vector3.Lerp(transform.position, objetPrendrePointTransformation.position, Time.deltaTime * lerpVitesse);
+            objetRigidbody.MovePosition(nouvellePosition);
         }
     }
 
