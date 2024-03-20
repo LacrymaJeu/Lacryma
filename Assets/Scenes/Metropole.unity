@@ -6097,6 +6097,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.000000010445421
       objectReference: {fileID: 0}
+    - target: {fileID: 2118159080788461976, guid: 8eaa4d661006cc84e82d616edbb055ca,
+        type: 3}
+      propertyPath: groundCheckDistance
+      value: 1.3
+      objectReference: {fileID: 0}
     - target: {fileID: 4269455413293061442, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalPosition.x
