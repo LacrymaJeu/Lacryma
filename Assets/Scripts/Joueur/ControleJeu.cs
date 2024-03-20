@@ -11,6 +11,10 @@ public class ControleJeu : MonoBehaviour {
 
     // Distance de vérification pour déterminer si le joueur est au sol
     [SerializeField] private float groundCheckDistance = 0.1f;
+    //grosseur du box cast
+    float boxCastSize = 0.5f;
+
+    [SerializeField] private float maxJumpVelocity = .2f;
 
     public player scriptJoueur;
 
@@ -30,6 +34,16 @@ public class ControleJeu : MonoBehaviour {
     private bool joueurSprint = false;
 
     private float mouvementOrigine;
+
+    // Durée du cooldown de saut (en secondes)
+    private float jumpCooldownDuration = 0.3f;
+
+    // Timer pour le cooldown de saut
+    private float jumpCooldownTimer = 0f;
+
+
+
+
 
     // Méthode appelée au démarrage de l'objet
     private void Awake() {
@@ -59,6 +73,11 @@ public class ControleJeu : MonoBehaviour {
 
         // Update the flag indicating whether the player was grounded in the previous frame
         touchaitSol = toucheSol;
+
+        // Met à jour le timer de cooldown de saut
+        if (jumpCooldownTimer > 0f) {
+            jumpCooldownTimer -= Time.deltaTime;
+        }
     }
 
     // Méthode appelée à chaque frame physique
@@ -69,12 +88,13 @@ public class ControleJeu : MonoBehaviour {
 
     // Vérifie si le joueur est au sol
     private bool GroundCheck() {
-        // Lance un rayon vers le bas pour vérifier si le joueur est au sol si le rayon touche le sol cela veut dire que le joueur touche le sol
+        // Crée un boxcast en utilisant la position du joueur et la direction vers le bas
+        // pour détecter les collisions avec les sols potentiels
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, Vector3.down, out hit, groundCheckDistance)) {
-            return true; // Le joueur est au sol si le rayon touche un collider dans groundCheckDistance
+        if (Physics.BoxCast(transform.position, Vector3.one * boxCastSize, Vector3.down, out hit, Quaternion.identity, groundCheckDistance)) {
+            return true; // Le joueur est au sol si le boxcast touche un collider dans groundCheckDistance
         }
-        //le rayon ne touche rien le joueur n'est pas au sol
+        // Aucune collision avec le sol détectée
         return false;
     }
 
@@ -82,9 +102,26 @@ public class ControleJeu : MonoBehaviour {
     public void Jump(InputAction.CallbackContext context) {
         // Vérifie si l'entrée de saut est effectuée et si le joueur est au sol
         if (context.performed && toucheSol) {
-            // Debug.Log("jump");
-            // force pour faire sauter
-            joueurRigidBody.AddForce(Vector3.up * forceSaut, ForceMode.Impulse);
+            // Vérifie si la vélocité verticale actuelle est inférieure à la vélocité maximale
+            if (Mathf.Abs(joueurRigidBody.velocity.y) < maxJumpVelocity) {
+                // Applique une force de saut uniquement si la vélocité verticale est en dessous de la limite
+                joueurRigidBody.AddForce(Vector3.up * forceSaut, ForceMode.Impulse);
+            }
+        }
+
+        // Vérifie si le cooldown de saut est terminé
+        if (jumpCooldownTimer <= 0f) {
+            // Vérifie si l'entrée de saut est effectuée et si le joueur est au sol
+            if (context.performed && toucheSol) {
+                // Vérifie si la vélocité verticale actuelle est inférieure à la vélocité maximale
+                if (Mathf.Abs(joueurRigidBody.velocity.y) < maxJumpVelocity) {
+                    // Applique une force de saut uniquement si la vélocité verticale est en dessous de la limite
+                    joueurRigidBody.AddForce(Vector3.up * forceSaut, ForceMode.Impulse);
+
+                    // Active le cooldown de saut
+                    jumpCooldownTimer = jumpCooldownDuration;
+                }
+            }
         }
     }
 
@@ -92,7 +129,7 @@ public class ControleJeu : MonoBehaviour {
     // Méthode appelée lorsque le sprint commence
     public void SprintStarted(InputAction.CallbackContext context) {
         joueurSprint = true; // Marquer que le joueur sprinte
-        Debug.Log("Début sprint");
+       // Debug.Log("Début sprint");
         // Increase moveSpeed using the player script reference
         if (toucheSol && scriptJoueur != null) {
                 scriptJoueur.moveSpeed += 2; // moveSpeed +2
@@ -102,7 +139,7 @@ public class ControleJeu : MonoBehaviour {
     // Méthode appelée lorsque le sprint se termine
     public void SprintCanceled(InputAction.CallbackContext context) {
         joueurSprint = false; // Marquer que le joueur a arrêté de sprinter
-        Debug.Log("Sprint Fin");
+       // Debug.Log("Sprint Fin");
 
         if (scriptJoueur != null && toucheSol) { 
                 scriptJoueur.moveSpeed = mouvementOrigine; //retourne a sa valeur initial
