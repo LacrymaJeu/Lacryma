@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlateformeBouge : MonoBehaviour
 {
     [SerializeField]
-    private WaypointPath _waypointPath;
+    private PointDeRepere _waypointPath;
 
     [SerializeField]
     private float _speed;
