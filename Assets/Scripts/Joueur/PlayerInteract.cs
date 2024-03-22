@@ -20,14 +20,14 @@ public class PlayerInteract : MonoBehaviour
                     switchInteractable.Interact();
                 }
 
-                if (collider.TryGetComponent(out NPCInteraction npcInteraction)) {
+                if (collider.TryGetComponent(out DeclencheurDialogue npcInteraction)) {
                     // Appeler la méthode Interact de l'objet SwitchInteract
                     npcInteraction.Interact();
                 }
             }
         }
     }
-    public NPCInteraction GetInterationObject() {
+    public DeclencheurDialogue GetInterationObject() {
      
             // distance des collider avec lequel le jouer peut interagir
             float interactRange = 2f;
@@ -38,7 +38,7 @@ public class PlayerInteract : MonoBehaviour
             // cherche tout les collider interagis
             foreach (Collider collider in colliderArray) {
                 // Vérifier si le collider possède un composant SwitchInteract
-                if (collider.TryGetComponent(out NPCInteraction npcInteraction)) {
+                if (collider.TryGetComponent(out DeclencheurDialogue npcInteraction)) {
                     return npcInteraction;
                 }
             }

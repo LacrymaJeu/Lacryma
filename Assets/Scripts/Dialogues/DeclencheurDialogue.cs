@@ -12,15 +12,24 @@ public class DeclencheurDialogue : MonoBehaviour {
     private bool aParler = false; // Variable pour vérifier si le dialogue a déjà commencé
 
     // Méthode appelée lorsqu'un autre collider entre en collision avec celui-ci
-    private void OnTriggerEnter(Collider other) {
-        // Vérification si l'autre objet est étiqueté comme "Dialogue" et si le dialogue n'a pas encore commencé
-        if (other.CompareTag("Dialogue") && !aParler) {
-            // Début du dialogue en appelant la méthode DialogueDebut() du script GestionDialogue attaché à l'autre objet
-            other.gameObject.GetComponent<GestionDialogue>().DialogueDebut(dialogueStrings, pourCameraNPC);
-            aParler = true; // Marquer que le dialogue a commencé
+
+    public void Interact()
+    {
+        Debug.Log("Interact");
+
+        if (!aParler)
+        {
+            // Start the dialogue directly without needing a collider trigger
+            GestionDialogue gestionDialogue = FindFirstObjectByType<GestionDialogue>();
+            if (gestionDialogue != null)
+            {
+                gestionDialogue.DialogueDebut(dialogueStrings, pourCameraNPC);
+                aParler = true;
+            }
         }
     }
 }
+
 
 // Classe représentant une chaîne de dialogue
 [System.Serializable]
@@ -32,3 +41,4 @@ public class dialogueString {
     public UnityEvent startDialogueEvent; // Événement déclenché au début de cette ligne de dialogue
     public UnityEvent endDialogueEvent; // Événement déclenché à la fin de cette ligne de dialogue
 }
+
