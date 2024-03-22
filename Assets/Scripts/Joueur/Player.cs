@@ -21,6 +21,8 @@ public class player : MonoBehaviour {
     public static bool peutBouger = true;
 
     private void Update() {
+        
+
         if (peutBouger)
         {
             // Récupère le vecteur de déplacement normalisé du gameInput
@@ -31,7 +33,14 @@ public class player : MonoBehaviour {
             Vector3 moveDir = camForward * inputVector.y + cam.right * inputVector.x;
 
             // Applique le déplacement
-            transform.position += moveDir * moveSpeed * Time.deltaTime;
+
+            float moveDistance = moveSpeed * Time.deltaTime;
+            float joueurRadius = .3f;
+            float playerHeight = 2f;
+            bool canMove = !Physics.CapsuleCast(transform.position, transform.position +Vector3.up * playerHeight, joueurRadius, moveDir,moveDistance );
+            if (canMove) {
+                transform.position += moveDir * moveSpeed * Time.deltaTime;
+            }
 
             // Oriente le joueur vers la direction de la caméra
             if (moveDir.magnitude > 0.1f)
@@ -46,10 +55,13 @@ public class player : MonoBehaviour {
         {
             marche = false;
         }
+                 
+        }
+
     }
 
     // verification si le joueur marche ou pas
-    public bool IsWalking() {
-        return marche;
-    }
-}
+    //public bool IsWalking() {
+        //return marche;
+   // }
+//}
