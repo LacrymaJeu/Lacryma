@@ -20,7 +20,7 @@ public class BulleDialogue : MonoBehaviour
 
     private void Start() {
         // Appeler Setup() avec le texte initial
-        Setup("Hi my guy!");
+        Setup("Want to play roblox with me?");
     }
 
     private void Setup(string text) {
