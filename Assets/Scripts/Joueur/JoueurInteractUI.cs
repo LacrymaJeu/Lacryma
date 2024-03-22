@@ -10,10 +10,8 @@ public class NPCInteractionUI : MonoBehaviour
     private void Update() {
         if (joueurInteract.GetInterationObject() != null){
             Apparait();
-            Debug.Log("wesh");
         } else {
             Disparait();
-            Debug.Log("non");
         }
     }
 
