@@ -12,7 +12,7 @@ public class GestionDialogue : MonoBehaviour
     [SerializeField] private GameObject dialogueParent; // Le conteneur des éléments de dialogue.
     [SerializeField] private TMP_Text dialogueText; // Le texte du dialogue.
 
-    [SerializeField] private float vitesseEcriture = 0.05f;
+    [SerializeField] private float vitesseEcriture = 0.05f; // Vitesse de l'écriture du texte quand le joueur le parle
     [SerializeField] private float vitesseTourne = 2f; // Vitesse de rotation de la caméra vers le NPC.
 
     private List<dialogueString> dialogueListe; // Liste des dialogues à afficher.
