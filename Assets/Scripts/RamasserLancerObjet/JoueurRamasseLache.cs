@@ -26,7 +26,7 @@ public class JoueurRamasseLache : MonoBehaviour
             if (objetTenable == null)
             {
                 // Distance maximale à laquelle le joueur peut ramasser un objet
-                float ramasseDistance = 4f;
+                float ramasseDistance = 12f;
                 // Lance un rayon depuis la position de la caméra du joueur vers l'avant
                 if (Physics.Raycast(joueurCameraTransform.position, joueurCameraTransform.forward, out RaycastHit raycastFrapper, ramasseDistance, masquePourRamasser))
                 {
