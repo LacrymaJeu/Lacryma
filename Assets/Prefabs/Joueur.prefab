@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: -1, z: -3}
+  m_FollowOffset: {x: 0, y: 6.89, z: -6}
   m_XDamping: 3
   m_YDamping: 3
   m_ZDamping: 3
@@ -152,11 +152,11 @@ Transform:
   m_GameObject: {fileID: 148411214816037654}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.41999996, y: 0.09000003, z: 1.27}
+  m_LocalPosition: {x: 0.41999602, y: 1.6829945, z: 1.2699951}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 5767323008077214590}
+  m_Father: {fileID: 7298942541214507541}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1828281191809257494
 GameObject:
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: -1, z: -3}
+  m_FollowOffset: {x: 0, y: 6.89, z: -6}
   m_XDamping: 3
   m_YDamping: 3
   m_ZDamping: 3
@@ -313,7 +313,7 @@ Transform:
   m_GameObject: {fileID: 3192988367396883731}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: -3}
+  m_LocalPosition: {x: -0.0000021457672, y: 6.8899975, z: -5.999994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -362,7 +362,7 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_YAxis:
-    Value: 0
+    Value: 1
     m_SpeedMode: 0
     m_MaxSpeed: 2
     m_AccelTime: 0.2
@@ -555,7 +555,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: -1, z: -3}
+  m_FollowOffset: {x: 0, y: 6.89, z: -6}
   m_XDamping: 3
   m_YDamping: 3
   m_ZDamping: 4.45
@@ -659,7 +659,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7298942541214507541}
-  - {fileID: 8690712064331579646}
   - {fileID: 3282749803088900734}
   - {fileID: 5348780561631558287}
   - {fileID: 8573269084935838681}
@@ -844,7 +843,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5106305148400434459}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.18354872, y: 0.032711938, z: 0.006111508, w: 0.9824472}
+  m_LocalRotation: {x: 0.39616573, y: 0.015295969, z: -0.006600823, w: 0.9180279}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -971,7 +970,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8305648995520448050}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.18003896, y: 0.052237153, z: 0.009574919, w: 0.9822248}
+  m_LocalRotation: {x: 0.38379312, y: 0.024597364, z: -0.010227457, w: 0.92303485}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1050,7 +1049,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8373726084258682144}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.18354872, y: 0.032711964, z: 0.0061115124, w: 0.9824472}
+  m_LocalRotation: {x: 0.39616573, y: 0.015295969, z: -0.006600823, w: 0.9180279}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1132,8 +1131,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8803782228910870206}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.18003899, y: 0.052237164, z: 0.009574921, w: 0.9822249}
-  m_LocalPosition: {x: 0, y: -1, z: -3}
+  m_LocalRotation: {x: 0.39616573, y: 0.015295969, z: -0.006600823, w: 0.9180279}
+  m_LocalPosition: {x: -0.0000021457672, y: 6.8899975, z: -5.999994}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1737,7 +1736,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 71e0d22a661f01e4f994fed583fcc4b7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8690712064331579646}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 71e0d22a661f01e4f994fed583fcc4b7,
         type: 3}
