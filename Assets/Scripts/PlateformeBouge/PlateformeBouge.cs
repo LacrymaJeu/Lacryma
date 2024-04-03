@@ -18,6 +18,8 @@ public class PlateformeBouge : MonoBehaviour
     private float _timeToWaypoint;
     private float _elapsedTime;
 
+    private HashSet<Transform> followingObjects = new HashSet<Transform>(); // HashSet to store objects following the platform
+
     void Start()
     {
         TargetNextWaypoint();
@@ -52,11 +54,29 @@ public class PlateformeBouge : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        other.transform.SetParent(transform);
+        Transform parentTransform = other.transform.parent;
+        if (parentTransform != null)
+        {
+            parentTransform.SetParent(transform);
+            followingObjects.Add(parentTransform); // Add the parent transform to the HashSet
+            Debug.Log("Object entered trigger: " + parentTransform.name);
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        other.transform.SetParent(null);
+        Transform parentTransform = other.transform.parent;
+        if (parentTransform != null)
+        {
+            Debug.Log("Object exited trigger: " + parentTransform.name);
+
+                foreach (Transform obj in followingObjects)
+                {
+                    obj.SetParent(null); // Reset the parent transform for all objects in the HashSet
+                    Debug.Log("Reset parent transform for: " + obj.name);
+                }
+                followingObjects.Clear(); // Clear the HashSet
+            
+        }
     }
 }
