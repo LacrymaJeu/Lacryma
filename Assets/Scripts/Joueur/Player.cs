@@ -58,10 +58,8 @@ public class player : MonoBehaviour {
                  
         }
 
-    }
-
-    // verification si le joueur marche ou pas
-    //public bool IsWalking() {
-        //return marche;
-   // }
-//}
+     //verification si le joueur marche ou pas
+    public bool IsWalking() {
+        return marche;
+     }
+  }

@@ -2,61 +2,83 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Permet au joueur de rester sur les plateformes qui bougent
+
 public class PlateformeBouge : MonoBehaviour
 {
     [SerializeField]
-    private PointDeRepere _waypointPath;
+    private PointDeRepere _passagePlateforme; // Passage la plateforme prend
 
     [SerializeField]
-    private float _speed;
+    private float _vitesse;
 
-    private int _targetWaypointIndex;
+    private int _ciblePassagePlateformeIndex;
 
-    private Transform _previousWaypoint;
-    private Transform _targetWaypoint;
+    private Transform _precedentPassagePlateforme;
+    private Transform _ciblePassagePlateforme;
 
-    private float _timeToWaypoint;
-    private float _elapsedTime;
+    private float _tempsAPassagePlateforme;
+    private float _tempsEcouler;
+
+    private HashSet<Transform> suitObjets = new HashSet<Transform>(); // HashSet pour suivre les objets sur la plateforme
 
     void Start()
     {
-        TargetNextWaypoint();
+        CibleProchainPassagePlateforme(); // Appel de la fonction pour définir la prochaine cible
     }
 
     void FixedUpdate()
     {
-        _elapsedTime += Time.deltaTime;
+        _tempsEcouler += Time.deltaTime; // Mise à jour du temps écoulé
 
-        float elapsedPercentage = _elapsedTime / _timeToWaypoint;
-        elapsedPercentage = Mathf.SmoothStep(0, 1, elapsedPercentage);
-        transform.position = Vector3.Lerp(_previousWaypoint.position, _targetWaypoint.position, elapsedPercentage);
-        transform.rotation = Quaternion.Lerp(_previousWaypoint.rotation, _targetWaypoint.rotation, elapsedPercentage);
+        float ecoulerPourcentage = _tempsEcouler / _tempsAPassagePlateforme; // Calcul du pourcentage de déplacement
+        ecoulerPourcentage = Mathf.SmoothStep(0, 1, ecoulerPourcentage); // Application d'une interpolation de mouvement
+        transform.position = Vector3.Lerp(_precedentPassagePlateforme.position, _ciblePassagePlateforme.position, ecoulerPourcentage); // Déplacement
+        transform.rotation = Quaternion.Lerp(_precedentPassagePlateforme.rotation, _ciblePassagePlateforme.rotation, ecoulerPourcentage); // Rotation
 
-        if (elapsedPercentage >= 1)
+        if (ecoulerPourcentage >= 1)
         {
-            TargetNextWaypoint();
+            CibleProchainPassagePlateforme(); // Définir la prochaine cible lorsque le déplacement est terminé
         }
     }
-
-    private void TargetNextWaypoint()
+    // Défini la prochaine cible de la plateforme
+    private void CibleProchainPassagePlateforme()
     {
-        _previousWaypoint = _waypointPath.GetWaypoint(_targetWaypointIndex);
-        _targetWaypointIndex = _waypointPath.GetNextWaypointIndex(_targetWaypointIndex);
-        _targetWaypoint = _waypointPath.GetWaypoint(_targetWaypointIndex);
+        _precedentPassagePlateforme = _passagePlateforme.ObtenirPassagePlateforme(_ciblePassagePlateformeIndex); // Plateforme précédente
+        _ciblePassagePlateformeIndex = _passagePlateforme.ObtenirProchainePassagePlateformeIndex(_ciblePassagePlateformeIndex); // Index prochaine cible
+        _ciblePassagePlateforme = _passagePlateforme.ObtenirPassagePlateforme(_ciblePassagePlateformeIndex); // Plateforme cible
 
-        _elapsedTime = 0;
+        _tempsEcouler = 0;
 
-        float distanceToWaypoint = Vector3.Distance(_previousWaypoint.position, _targetWaypoint.position);
-        _timeToWaypoint = distanceToWaypoint / _speed;
+        float distanceAPassagePlateforme = Vector3.Distance(_precedentPassagePlateforme.position, _ciblePassagePlateforme.position); // Calcul distance à parcourir
+        _tempsAPassagePlateforme = distanceAPassagePlateforme / _vitesse;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        other.transform.SetParent(transform);
+        Transform parentTransforme = other.transform.parent; // Transform parent de l'objet entrant
+        if (parentTransforme != null)
+        {
+            parentTransforme.SetParent(transform); // Définition de la plateforme comme parent de l'objet
+            suitObjets.Add(parentTransforme); 
+            Debug.Log("Objet entrer trigger: " + parentTransforme.name);
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        other.transform.SetParent(null);
+        Transform parentTransform = other.transform.parent; // Transform parent de l'objet sortant
+        if (parentTransform != null)
+        {
+            Debug.Log("Objet exit trigger: " + parentTransform.name);
+
+                foreach (Transform obj in suitObjets) // Boucle à travers tous les objets suivis
+                {
+                    obj.SetParent(null); 
+                    Debug.Log("Reset parent transform pour: " + obj.name);
+                }
+                suitObjets.Clear(); // Effacer HashSet pour le nettoyage
+
+        }
     }
 }
