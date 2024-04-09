@@ -5611,12 +5611,12 @@ PrefabInstance:
     - target: {fileID: 5348780561631558287, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.015295968
+      value: 0.015296
       objectReference: {fileID: 0}
     - target: {fileID: 5348780561631558287, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.006600822
+      value: -0.0066008354
       objectReference: {fileID: 0}
     - target: {fileID: 5689310271691453248, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
@@ -5631,12 +5631,12 @@ PrefabInstance:
     - target: {fileID: 5689310271691453248, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.015295968
+      value: 0.015296
       objectReference: {fileID: 0}
     - target: {fileID: 5689310271691453248, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.006600822
+      value: -0.0066008354
       objectReference: {fileID: 0}
     - target: {fileID: 7477202607824926211, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
@@ -13462,6 +13462,31 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1584660463}
+    - target: {fileID: 6663401468274737723, guid: 2fb79ee2591ffba46b41046511295505,
+        type: 3}
+      propertyPath: dialogueStrings.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663401468274737723, guid: 2fb79ee2591ffba46b41046511295505,
+        type: 3}
+      propertyPath: dialogueStrings.Array.data[0].texte
+      value: 'Qu''est-ce tu veux p''tite? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663401468274737723, guid: 2fb79ee2591ffba46b41046511295505,
+        type: 3}
+      propertyPath: dialogueStrings.Array.data[1].texte
+      value: 'On a perdu un objet important, on n''a pas le temps de discuter. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663401468274737723, guid: 2fb79ee2591ffba46b41046511295505,
+        type: 3}
+      propertyPath: dialogueStrings.Array.data[2].laFin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6663401468274737723, guid: 2fb79ee2591ffba46b41046511295505,
+        type: 3}
+      propertyPath: dialogueStrings.Array.data[2].texte
+      value: "Si quelqu'un apprend qu'il vient du d\xE9sert..."
+      objectReference: {fileID: 0}
     - target: {fileID: 6692322114681720290, guid: 2fb79ee2591ffba46b41046511295505,
         type: 3}
       propertyPath: m_Mesh
@@ -13542,6 +13567,31 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1790370266}
+    - target: {fileID: 7067171403280891167, guid: 2fb79ee2591ffba46b41046511295505,
+        type: 3}
+      propertyPath: dialogueStrings.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067171403280891167, guid: 2fb79ee2591ffba46b41046511295505,
+        type: 3}
+      propertyPath: dialogueStrings.Array.data[0].laFin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067171403280891167, guid: 2fb79ee2591ffba46b41046511295505,
+        type: 3}
+      propertyPath: dialogueStrings.Array.data[0].texte
+      value: "Tu as vu toutes ces bo\xEEtes qui trainent? "
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067171403280891167, guid: 2fb79ee2591ffba46b41046511295505,
+        type: 3}
+      propertyPath: dialogueStrings.Array.data[1].laFin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7067171403280891167, guid: 2fb79ee2591ffba46b41046511295505,
+        type: 3}
+      propertyPath: dialogueStrings.Array.data[1].texte
+      value: "Les gens devraient \xEAtre plus respectueux des aires communes."
+      objectReference: {fileID: 0}
     - target: {fileID: 7122455571512346228, guid: 2fb79ee2591ffba46b41046511295505,
         type: 3}
       propertyPath: m_Mesh
@@ -13962,7 +14012,8 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1831191364}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2841235009593102713, guid: 2fb79ee2591ffba46b41046511295505, type: 3}
     m_RemovedGameObjects:
     - {fileID: 1007900221282524666, guid: 2fb79ee2591ffba46b41046511295505, type: 3}
     - {fileID: 1635510804070009894, guid: 2fb79ee2591ffba46b41046511295505, type: 3}
