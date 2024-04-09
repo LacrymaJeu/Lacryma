@@ -16,23 +16,23 @@ public class GestionDialogue : MonoBehaviour
     [SerializeField] private float vitesseTourne = 2f; // Vitesse de rotation de la caméra vers le NPC.
 
     private List<dialogueString> dialogueListe; // Liste des dialogues à afficher.
-
-
-    [Header("Joueur")]
     private Transform cameraJoueur; // Référence à la caméra du joueur.
-
     private int dialogueIndex = 0; // Index du dialogue en cours.
+    public static bool enDialogue = false; // Indique si le joueur est en dialogue avec le NPC.
+
 
     private void Start()
     {
         dialogueParent.SetActive(false); // Désactive le conteneur de dialogue au démarrage.
         cameraJoueur = Camera.main.transform; // Initialise la référence à la caméra du joueur.
-
     }
 
     // Démarre le dialogue avec les textes spécifiés et le NPC donné en paramètre.
     public void DialogueDebut(List<dialogueString> textDevoirAfficher, Transform NPC)
     {
+        if (enDialogue) return; // Si le joueur est déjà en dialogue, ne pas démarrer un nouveau dialogue.
+
+        enDialogue = true; // Met à jour l'état du dialogue.
         dialogueParent.SetActive(true);
         player.peutBouger = false; // Empêche le joueur de bouger pendant le dialogue.
 
@@ -64,6 +64,7 @@ public class GestionDialogue : MonoBehaviour
         cameraJoueur.rotation = cibleRotation;
     }
 
+
     // Coroutine pour afficher les dialogues un par un.
     private IEnumerator AfficheDialogue()
     {
@@ -77,6 +78,13 @@ public class GestionDialogue : MonoBehaviour
 
             ligne.endDialogueEvent?.Invoke(); // Déclenche l'événement de fin de dialogue.
 
+            if (ligne.laFin) // Vérifie si c'est la fin du dialogue.
+            {
+                DialogueArrete(); // Arrête le dialogue si c'est la fin.
+                yield break; // Sort de la coroutine.
+            }
+
+            dialogueIndex++; // Passe au dialogue suivant.
         }
 
         DialogueArrete(); // Arrête le dialogue une fois tous les dialogues affichés.
@@ -91,20 +99,17 @@ public class GestionDialogue : MonoBehaviour
             dialogueText.text += lettre; // Ajoute la lettre au texte du dialogue.
             yield return new WaitForSeconds(vitesseEcriture); // Attend un court instant avant la prochaine lettre.
         }
-        
+
         yield return new WaitUntil(() => Input.GetMouseButtonDown(0)); // Attend que le joueur appuie sur le bouton de la souris.
 
-        if (dialogueListe[dialogueIndex].laFin) // Vérifie si c'est la fin du dialogue.
-        {
-            DialogueArrete(); // Arrête le dialogue si c'est la fin.
-        }
-
-        dialogueIndex++; // Passe au dialogue suivant.
+        // dialogueIndex++; // Passe au dialogue suivant.
     }
 
     // Arrête le dialogue et réinitialise les paramètres.
     private void DialogueArrete()
     {
+        enDialogue = false; // Met à jour l'état du dialogue.
+
         StopAllCoroutines(); // Arrête toutes les coroutines en cours.
         dialogueText.text = ""; // Efface le texte du dialogue.
         dialogueParent.SetActive(false); // Désactive le conteneur de dialogue.
@@ -113,5 +118,14 @@ public class GestionDialogue : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked; // Verrouille le curseur.
         Cursor.visible = false; // Cache le curseur.
+
+        ResetEtatDialogue();
+    }
+
+    // Réinitialise l'état de dialogue.
+    private void ResetEtatDialogue()
+    {
+        dialogueIndex = 0;
+        dialogueListe = null;
     }
 }

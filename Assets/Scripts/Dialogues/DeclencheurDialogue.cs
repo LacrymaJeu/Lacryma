@@ -5,30 +5,27 @@ using UnityEngine.Events;
 
 // Trigger pour les dialogues
 
-public class DeclencheurDialogue : MonoBehaviour {
+public class DeclencheurDialogue : MonoBehaviour
+{
     [SerializeField] private List<dialogueString> dialogueStrings = new List<dialogueString>(); // Liste des chaînes de dialogue
     [SerializeField] private Transform pourCameraNPC; // Référence à la caméra du NPC
 
-    private bool aParler = false; // Variable pour vérifier si le dialogue a déjà commencé
-
     // Méthode appelée lorsqu'un autre collider entre en collision avec celui-ci
-
     public void Interact()
     {
         Debug.Log("Interact");
 
-        if (!aParler)
+        if (GestionDialogue.enDialogue) return; // Si le joueur est déjà en dialogue, ne pas démarrer un nouveau dialogue.
+
+        // Start the dialogue directly without needing a collider trigger
+        GestionDialogue gestionDialogue = FindFirstObjectByType<GestionDialogue>();
+        if (gestionDialogue != null)
         {
-            // Start the dialogue directly without needing a collider trigger
-            GestionDialogue gestionDialogue = FindFirstObjectByType<GestionDialogue>();
-            if (gestionDialogue != null)
-            {
-                gestionDialogue.DialogueDebut(dialogueStrings, pourCameraNPC);
-                aParler = true;
-            }
+            gestionDialogue.DialogueDebut(dialogueStrings, pourCameraNPC);
         }
     }
 }
+
 
 
 // Classe représentant une chaîne de dialogue
