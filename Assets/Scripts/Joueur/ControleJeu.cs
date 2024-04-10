@@ -59,8 +59,10 @@ public class ControleJeu : MonoBehaviour {
         // Associer la méthode SprintCanceled à l'action de sprint (à la fin de la pression)
         playerInputActions.Player.Sprint.canceled += SprintCanceled;
 
-        //movement original
-        mouvementOrigine = scriptJoueur.vitesseDep;
+        if (scriptJoueur != null)
+        {
+            mouvementOrigine = scriptJoueur.vitesseDep;
+        }
     }
 
 
