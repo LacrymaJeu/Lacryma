@@ -5346,6 +5346,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: -0.010227443
       objectReference: {fileID: 0}
+    - target: {fileID: 2118159080788461976, guid: 8eaa4d661006cc84e82d616edbb055ca,
+        type: 3}
+      propertyPath: maxSautVelocity
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2657713897656541010, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: player
@@ -5365,6 +5370,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -5.999994
+      objectReference: {fileID: 0}
+    - target: {fileID: 3299381767609868639, guid: 8eaa4d661006cc84e82d616edbb055ca,
+        type: 3}
+      propertyPath: vitesseDep
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3723106098671925359, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
@@ -5499,7 +5509,7 @@ PrefabInstance:
     - target: {fileID: 7477202607824926211, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0066008354
+      value: -0.006600836
       objectReference: {fileID: 0}
     - target: {fileID: 8965139740161553308, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}

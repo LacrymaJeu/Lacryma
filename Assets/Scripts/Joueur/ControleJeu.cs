@@ -55,12 +55,12 @@ public class ControleJeu : MonoBehaviour {
         joueurRigidBody = GetComponent<Rigidbody>();
 
         // Associer la méthode SprintStarted à l'action de sprint (au début de la pression)
-        playerInputActions.Player.Sprint.started += SprintStarted;
+        playerInputActions.Player.Sprint.started += DebutSprint;
         // Associer la méthode SprintCanceled à l'action de sprint (à la fin de la pression)
         playerInputActions.Player.Sprint.canceled += SprintCanceled;
 
         //movement original
-        mouvementOrigine = scriptJoueur.moveSpeed;
+        mouvementOrigine = scriptJoueur.vitesseDep;
     }
 
 
@@ -68,7 +68,7 @@ public class ControleJeu : MonoBehaviour {
         // regard si le joueur touche le sol apres le sprint
         if (scriptJoueur != null && !joueurSprint && !touchaitSol && toucheSol) {
             // revien au movement original quand le joueur touche le sol
-            scriptJoueur.moveSpeed = mouvementOrigine;
+            scriptJoueur.vitesseDep = mouvementOrigine;
         }
 
         // Update the flag indicating whether the player was grounded in the previous frame
@@ -127,12 +127,12 @@ public class ControleJeu : MonoBehaviour {
 
     // Méthode pour gérer le sprint du joueur
     // Méthode appelée lorsque le sprint commence
-public void SprintStarted(InputAction.CallbackContext context) {
+public void DebutSprint(InputAction.CallbackContext context) {
     joueurSprint = true; // Marquer que le joueur sprinte
     // Augmenter moveSpeed uniquement si le joueur est au sol ou s'il sprinte déjà dans les airs
     if (toucheSol || joueurSprint) {
         if (scriptJoueur != null) {
-            scriptJoueur.moveSpeed += 2; // moveSpeed + 2
+            scriptJoueur.vitesseDep += 2; // moveSpeed + 2
         }
     }
 }
@@ -143,7 +143,7 @@ public void SprintStarted(InputAction.CallbackContext context) {
        // Debug.Log("Sprint Fin");
 
         if (scriptJoueur != null && toucheSol) { 
-                scriptJoueur.moveSpeed = mouvementOrigine; //retourne a sa valeur initial
+                scriptJoueur.vitesseDep = mouvementOrigine; //retourne a sa valeur initial
         }
     }
 
