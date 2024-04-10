@@ -5504,12 +5504,22 @@ PrefabInstance:
     - target: {fileID: 1548748368563431571, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.02459733
+      value: 0.024597362
       objectReference: {fileID: 0}
     - target: {fileID: 1548748368563431571, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.010227443
+      value: -0.010227455
+      objectReference: {fileID: 0}
+    - target: {fileID: 2657713897656541010, guid: 8eaa4d661006cc84e82d616edbb055ca,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1737651671}
+    - target: {fileID: 2657713897656541010, guid: 8eaa4d661006cc84e82d616edbb055ca,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3282749803088900734, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
@@ -5523,15 +5533,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3723106098671925359, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3723106098671925359, guid: 8eaa4d661006cc84e82d616edbb055ca,
+        type: 3}
       propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
-        'mixamorig:LeftHandThumb2'\n\tTransform 'mixamorig:LeftHandIndex1'\n\tTransform
-        'mixamorig:LeftHandPinky2'\n\tTransform 'mixamorig:RightHandRing2'\n\tTransform
-        'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:LeftHandThumb3'\n\tTransform
-        'mixamorig:RightArm'\n\tand more ...\n\tFrom animation clip 'Two Cycle Sprint'\n\tFrom
-        animation clip 'Walking (1)'"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4269455413293061442, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
@@ -5541,7 +5549,7 @@ PrefabInstance:
     - target: {fileID: 4269455413293061442, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 175.83
+      value: 175.66
       objectReference: {fileID: 0}
     - target: {fileID: 4269455413293061442, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
@@ -5611,12 +5619,12 @@ PrefabInstance:
     - target: {fileID: 5348780561631558287, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.015296
+      value: 0.015295969
       objectReference: {fileID: 0}
     - target: {fileID: 5348780561631558287, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0066008354
+      value: -0.006600823
       objectReference: {fileID: 0}
     - target: {fileID: 5689310271691453248, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
@@ -5631,12 +5639,12 @@ PrefabInstance:
     - target: {fileID: 5689310271691453248, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.015296
+      value: 0.015295969
       objectReference: {fileID: 0}
     - target: {fileID: 5689310271691453248, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0066008354
+      value: -0.006600823
       objectReference: {fileID: 0}
     - target: {fileID: 7477202607824926211, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
@@ -5651,22 +5659,27 @@ PrefabInstance:
     - target: {fileID: 7477202607824926211, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.015296
+      value: 0.015295968
       objectReference: {fileID: 0}
     - target: {fileID: 7477202607824926211, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0066008354
+      value: -0.006600822
       objectReference: {fileID: 0}
     - target: {fileID: 8965139740161553308, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_Name
       value: Joueur
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3723106098671925359, guid: 8eaa4d661006cc84e82d616edbb055ca, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7926578599436728495, guid: 8eaa4d661006cc84e82d616edbb055ca,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1261653919}
   m_SourcePrefab: {fileID: 100100000, guid: 8eaa4d661006cc84e82d616edbb055ca, type: 3}
 --- !u!114 &599787766 stripped
 MonoBehaviour:
@@ -12000,6 +12013,34 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1261653914 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7926578599436728495, guid: 8eaa4d661006cc84e82d616edbb055ca,
+    type: 3}
+  m_PrefabInstance: {fileID: 599787765}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1261653919
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261653914}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 71e0d22a661f01e4f994fed583fcc4b7, type: 3}
+  m_Controller: {fileID: 9100000, guid: 2b3d53580791c09459c0cf59cf076eeb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1266226252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19907,6 +19948,18 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!114 &1737651671 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3299381767609868639, guid: 8eaa4d661006cc84e82d616edbb055ca,
+    type: 3}
+  m_PrefabInstance: {fileID: 599787765}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e132d3c9cd3ddb45a5de4b50294e98e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1748303124
 Mesh:
   m_ObjectHideFlags: 0
