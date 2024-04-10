@@ -10,7 +10,7 @@ public class Player : MonoBehaviour {
     public Transform cam;
 
     // Vitesse de déplacement du joueur
-    public float moveSpeed = 7f; 
+    public float vitesseDep = 7f; 
 
     // Référence à l'input du jeu
     [SerializeField] private ControleJeu gameInput; // La variable doit être en anglais
@@ -33,12 +33,12 @@ public class Player : MonoBehaviour {
 
             // Applique le déplacement
 
-            float moveDistance = moveSpeed * Time.deltaTime;
+            float moveDistance = vitesseDep * Time.deltaTime;
             float joueurRadius = .3f;
             float playerHeight = 2f;
-            bool canMove = !Physics.CapsuleCast(transform.position, transform.position +Vector3.up * playerHeight, joueurRadius, moveDir,moveDistance );
-            if (canMove) {
-                transform.position += moveDir * moveSpeed * Time.deltaTime;
+            bool peutBouger = !Physics.CapsuleCast(transform.position, transform.position +Vector3.up * playerHeight, joueurRadius, moveDir,moveDistance );
+            if (peutBouger) {
+                transform.position += moveDir * vitesseDep * Time.deltaTime;
             }
 
             // Oriente le joueur vers la direction de la caméra
@@ -51,7 +51,7 @@ public class Player : MonoBehaviour {
             // Gestion de l'animation marche
             ilMarche = moveDir != Vector3.zero;
 
-            ilCours = moveSpeed > 3f;
+            ilCours = vitesseDep > 3f;
     } 
                  
         
