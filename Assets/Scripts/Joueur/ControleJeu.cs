@@ -16,7 +16,7 @@ public class ControleJeu : MonoBehaviour {
 
     [SerializeField] private float maxJumpVelocity = .2f;
 
-    public player scriptJoueur;
+    public Player scriptJoueur;
 
     // Gestionnaire d'actions du joueur
     private PlayerInputActions playerInputActions;
@@ -127,15 +127,16 @@ public class ControleJeu : MonoBehaviour {
 
     // Méthode pour gérer le sprint du joueur
     // Méthode appelée lorsque le sprint commence
-    public void SprintStarted(InputAction.CallbackContext context) {
-        joueurSprint = true; // Marquer que le joueur sprinte
-       // Debug.Log("Début sprint");
-        // Increase moveSpeed using the player script reference
-        if (toucheSol && scriptJoueur != null) {
-                scriptJoueur.moveSpeed += 2; // moveSpeed +2
-            
+public void SprintStarted(InputAction.CallbackContext context) {
+    joueurSprint = true; // Marquer que le joueur sprinte
+    // Augmenter moveSpeed uniquement si le joueur est au sol ou s'il sprinte déjà dans les airs
+    if (toucheSol || joueurSprint) {
+        if (scriptJoueur != null) {
+            scriptJoueur.moveSpeed += 2; // moveSpeed + 2
         }
     }
+}
+
     // Méthode appelée lorsque le sprint se termine
     public void SprintCanceled(InputAction.CallbackContext context) {
         joueurSprint = false; // Marquer que le joueur a arrêté de sprinter
