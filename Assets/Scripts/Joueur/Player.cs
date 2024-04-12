@@ -26,13 +26,16 @@ public class Player : MonoBehaviour {
 
  
 
-    public static bool peutBouger = true;
+    public static bool peutBougerDialogue = true;
 
 
     private void Awake() {
         joueurRigidbody = GetComponent<Rigidbody>();
     }
     private void Update() {
+        // Vérifie si le joueur est en dialogue
+        if (peutBougerDialogue)
+        {
             // Récupère le vecteur de déplacement normalisé du gameInput
             Vector2 inputVector = gameInput.GetMovementVectorNormalized(); // Variable doit être en anglais
 
@@ -45,8 +48,9 @@ public class Player : MonoBehaviour {
             float moveDistance = vitesseDep * Time.deltaTime;
             float joueurRadius = .3f;
             float playerHeight = 2f;
-            bool canMove = !Physics.CapsuleCast(transform.position, transform.position +Vector3.up * playerHeight, joueurRadius, moveDir,moveDistance );
-            if (canMove) {
+            bool canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, joueurRadius, moveDir, moveDistance);
+            if (canMove)
+            {
                 transform.position += moveDir * vitesseDep * Time.deltaTime;
             }
 
@@ -61,6 +65,8 @@ public class Player : MonoBehaviour {
             ilMarche = moveDir != Vector3.zero;
 
             ilCours = vitesseDep > 5f;
+        }
+           
 
            
     } 

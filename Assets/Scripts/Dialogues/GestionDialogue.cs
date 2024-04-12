@@ -34,7 +34,7 @@ public class GestionDialogue : MonoBehaviour
 
         enDialogue = true; // Met à jour l'état du dialogue.
         dialogueParent.SetActive(true);
-        Player.peutBouger = false; // Empêche le joueur de bouger pendant le dialogue.
+        Player.peutBougerDialogue = false; // Empêche le joueur de bouger pendant le dialogue.
 
         Cursor.lockState = CursorLockMode.None; // Déverrouille le curseur.
         Cursor.visible = true; // Rend le curseur visible.
@@ -114,7 +114,7 @@ public class GestionDialogue : MonoBehaviour
         dialogueText.text = ""; // Efface le texte du dialogue.
         dialogueParent.SetActive(false); // Désactive le conteneur de dialogue.
 
-        Player.peutBouger = true; // Autorise à nouveau le mouvement du joueur.
+        Player.peutBougerDialogue = true; // Autorise à nouveau le mouvement du joueur.
 
         Cursor.lockState = CursorLockMode.Locked; // Verrouille le curseur.
         Cursor.visible = false; // Cache le curseur.
