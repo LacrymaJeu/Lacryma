@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
+    // Référence au composant Rigidbody
+    private Rigidbody joueurRigidbody; 
+
     // Référence à la caméra
     public Transform cam;
 
@@ -13,7 +16,7 @@ public class Player : MonoBehaviour {
     public float vitesseDep = 7f; 
 
     // Référence à l'input du jeu
-    [SerializeField] private ControleJeu gameInput; // La variable doit être en anglais
+    [SerializeField] private ControleJeu gameInput; 
 
     // Indique si le joueur est en train de marcher
     private bool ilMarche;
@@ -21,8 +24,14 @@ public class Player : MonoBehaviour {
     // Indique si le joueur est en train de courir
     private bool ilCours;
 
+ 
+
     public static bool peutBouger = true;
 
+
+    private void Awake() {
+        joueurRigidbody = GetComponent<Rigidbody>();
+    }
     private void Update() {
             // Récupère le vecteur de déplacement normalisé du gameInput
             Vector2 inputVector = gameInput.GetMovementVectorNormalized(); // Variable doit être en anglais
@@ -36,8 +45,8 @@ public class Player : MonoBehaviour {
             float moveDistance = vitesseDep * Time.deltaTime;
             float joueurRadius = .3f;
             float playerHeight = 2f;
-            bool peutBouger = !Physics.CapsuleCast(transform.position, transform.position +Vector3.up * playerHeight, joueurRadius, moveDir,moveDistance );
-            if (peutBouger) {
+            bool canMove = !Physics.CapsuleCast(transform.position, transform.position +Vector3.up * playerHeight, joueurRadius, moveDir,moveDistance );
+            if (canMove) {
                 transform.position += moveDir * vitesseDep * Time.deltaTime;
             }
 
@@ -51,7 +60,9 @@ public class Player : MonoBehaviour {
             // Gestion de l'animation marche
             ilMarche = moveDir != Vector3.zero;
 
-            ilCours = vitesseDep > 3f;
+            ilCours = vitesseDep > 5f;
+
+           
     } 
                  
         
@@ -65,4 +76,5 @@ public class Player : MonoBehaviour {
     public bool IlCours() {
         return ilCours;
     }
+
 }
