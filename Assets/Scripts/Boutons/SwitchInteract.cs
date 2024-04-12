@@ -5,6 +5,7 @@ using UnityEngine;
 public class SwitchInteract : MonoBehaviour {
     // Référence à la boîte à animer
     [SerializeField] private GameObject boxToAnimate;
+    [SerializeField] private GameObject boxToAnimate2;
 
     // Référence à l'Animator de la boîte
     private Animator boxAnimator;
@@ -19,6 +20,7 @@ public class SwitchInteract : MonoBehaviour {
     private void Start() {
         // Récupération de l'Animator attaché à la boîte
         boxAnimator = boxToAnimate.GetComponent<Animator>();
+        boxAnimator = boxToAnimate2.GetComponent<Animator>();
     }
 
     // Méthode publique appelée lors de l'interaction avec la boîte
