@@ -1,7 +1,14 @@
 fileFormatVersion: 2
 guid: 4987e0c7ce38cf14885b4e87ac63a5c4
+AssetOrigin:
+  serializedVersion: 1
+  productId: 273130
+  packageName: Ice Cream Car Low_Poly
+  packageVersion: 1.0
+  assetPath: Assets/Models/Free Car/Ice Cream Car/Models/Ice Cream Car.FBX
+  uploadId: 634469
 ModelImporter:
-  serializedVersion: 21300
+  serializedVersion: 22200
   internalIDToNameTable: []
   externalObjects:
   - first:
@@ -21,8 +28,6 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 1
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -42,9 +47,10 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
+    importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -72,6 +78,7 @@ ModelImporter:
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -104,15 +111,9 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 0
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 273130
-  packageName: Ice Cream Car Low_Poly
-  packageVersion: 1.0
-  assetPath: Assets/Models/Free Car/Ice Cream Car/Models/Ice Cream Car.FBX
-  uploadId: 634469
