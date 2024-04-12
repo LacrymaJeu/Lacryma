@@ -13,7 +13,7 @@ public class Player : MonoBehaviour {
     public Transform cam;
 
     // Vitesse de déplacement du joueur
-    public float vitesseDep = 7f; 
+    public float vitesseDep = 5f; 
 
     // Référence à l'input du jeu
     [SerializeField] private ControleJeu gameInput; 
