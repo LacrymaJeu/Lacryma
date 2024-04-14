@@ -20,6 +20,11 @@ public class PlayerInteract : MonoBehaviour
                     switchInteractable.Interact();
                 }
 
+                if (collider.TryGetComponent(out SwitchInteractTemps switchInteractableTemps)) {
+                    // Appeler la méthode Interact de l'objet SwitchInteract
+                    switchInteractableTemps.Interact();
+                }
+
                 if (collider.TryGetComponent(out DeclencheurDialogue npcInteraction)) {
                     // Appeler la méthode Interact de l'objet SwitchInteract
                     npcInteraction.Interact();

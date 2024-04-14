@@ -102,26 +102,35 @@ public class ControleJeu : MonoBehaviour {
 
     // Méthode pour gérer le saut du joueur
     public void Jump(InputAction.CallbackContext context) {
-        // Vérifie si l'entrée de saut est effectuée et si le joueur est au sol
-        if (context.performed && toucheSol) {
-            // Vérifie si la vélocité verticale actuelle est inférieure à la vélocité maximale
-            if (Mathf.Abs(joueurRigidBody.velocity.y) < maxJumpVelocity) {
-                // Applique une force de saut uniquement si la vélocité verticale est en dessous de la limite
-                joueurRigidBody.AddForce(Vector3.up * forceSaut, ForceMode.Impulse);
-            }
-        }
-
-        // Vérifie si le cooldown de saut est terminé
-        if (jumpCooldownTimer <= 0f) {
+        // Vérifie si le joueur est en dialogue
+        if (Player.peutBougerDialogue)
+        {
             // Vérifie si l'entrée de saut est effectuée et si le joueur est au sol
-            if (context.performed && toucheSol) {
+            if (context.performed && toucheSol)
+            {
                 // Vérifie si la vélocité verticale actuelle est inférieure à la vélocité maximale
-                if (Mathf.Abs(joueurRigidBody.velocity.y) < maxJumpVelocity) {
+                if (Mathf.Abs(joueurRigidBody.velocity.y) < maxJumpVelocity)
+                {
                     // Applique une force de saut uniquement si la vélocité verticale est en dessous de la limite
                     joueurRigidBody.AddForce(Vector3.up * forceSaut, ForceMode.Impulse);
+                }
+            }
 
-                    // Active le cooldown de saut
-                    jumpCooldownTimer = jumpCooldownDuration;
+            // Vérifie si le cooldown de saut est terminé
+            if (jumpCooldownTimer <= 0f)
+            {
+                // Vérifie si l'entrée de saut est effectuée et si le joueur est au sol
+                if (context.performed && toucheSol)
+                {
+                    // Vérifie si la vélocité verticale actuelle est inférieure à la vélocité maximale
+                    if (Mathf.Abs(joueurRigidBody.velocity.y) < maxJumpVelocity)
+                    {
+                        // Applique une force de saut uniquement si la vélocité verticale est en dessous de la limite
+                        joueurRigidBody.AddForce(Vector3.up * forceSaut, ForceMode.Impulse);
+
+                        // Active le cooldown de saut
+                        jumpCooldownTimer = jumpCooldownDuration;
+                    }
                 }
             }
         }
@@ -134,7 +143,7 @@ public void DebutSprint(InputAction.CallbackContext context) {
     // Augmenter moveSpeed uniquement si le joueur est au sol ou s'il sprinte déjà dans les airs
     if (toucheSol || joueurSprint) {
         if (scriptJoueur != null) {
-            scriptJoueur.vitesseDep += 2; // moveSpeed + 2
+            scriptJoueur.vitesseDep += 3; // moveSpeed + 3
         }
     }
 }
