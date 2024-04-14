@@ -143,7 +143,7 @@ public void DebutSprint(InputAction.CallbackContext context) {
     // Augmenter moveSpeed uniquement si le joueur est au sol ou s'il sprinte déjà dans les airs
     if (toucheSol || joueurSprint) {
         if (scriptJoueur != null) {
-            scriptJoueur.vitesseDep += 3; // moveSpeed + 3
+            scriptJoueur.vitesseDep += 2; // moveSpeed + 2
         }
     }
 }

@@ -73,7 +73,7 @@ MonoBehaviour:
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
-  m_LastLoadedLayoutName: Layout3D
+  m_LastLoadedLayoutName: 
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -887,9 +887,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -185.13011, y: 188.1539, z: -337.6354}
+    m_Target: {x: -121.31469, y: 181.99203, z: -325.2445}
     speed: 2
-    m_Value: {x: 3.9935164, y: 2.9400067, z: 13.648542}
+    m_Value: {x: -185.13011, y: 188.1539, z: -337.6354}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -935,13 +935,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.027458323, y: 0.9432016, z: -0.09521125, w: -0.32141563}
+    m_Target: {x: -0.0041785087, y: 0.9560939, z: 0.01378229, w: 0.29321623}
     speed: 2
-    m_Value: {x: -0.14028233, y: -0.30179167, z: 0.04486319, w: -0.94205016}
+    m_Value: {x: -0.02742056, y: 0.94190437, z: -0.09508031, w: -0.32097358}
   m_Size:
-    m_Target: 3.415936
+    m_Target: 12.124355
     speed: 2
-    m_Value: 24.461906
+    m_Value: 3.415936
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1205,7 +1205,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: b0230000
     m_LastClickedID: 9136
-    m_ExpandedIDs: ffffffff00000000e6c30000e8c30000eac30000ecc30000eec30000f0c30000f2c30000f4c30000f6c30000fcc30000fec3000000c4000002c4000004c4000006c4000008c400000ac400000cc4000076c500007ec500000cc6000044c6000040d6000044d6000098ef0000
+    m_ExpandedIDs: 0000000076c5000078c500007ac500007cc500007ec5000080c5000082c5000084c5000086c5000088c500008ac500008cc500008ec5000090c5000092c5000094c5000096c5000098c500009ac500009cc500009ec50000a0c50000a2c50000a4c50000a6c50000a8c50000aac50000acc50000aec50000b0c50000b2c50000b4c50000b6c50000b8c50000bac50000bcc50000bec50000c0c50000c2c50000c4c50000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1234,7 +1234,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 353}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: ffffffff00000000e6c30000e8c30000eac30000ecc30000eec30000f0c30000f2c30000f4c30000f6c30000fcc30000fec3000000c4000002c4000004c4000006c4000008c400000ac400000cc4000076c500007ec500000cc6000044c6000040d6000044d6000098ef0000
+    m_ExpandedIDs: 0000000076c5000078c500007ac500007cc500007ec5000080c5000082c5000084c5000086c5000088c500008ac500008cc500008ec5000090c5000092c5000094c5000096c5000098c500009ac500009cc500009ec50000a0c50000a2c50000a4c50000a6c50000a8c50000aac50000acc50000aec50000b0c50000b2c50000b4c50000b6c50000b8c50000bac50000bcc50000bec50000c0c50000c2c50000c4c50000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
