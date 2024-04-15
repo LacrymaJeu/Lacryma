@@ -164,4 +164,16 @@ public void DebutSprint(InputAction.CallbackContext context) {
         inputVector = inputVector.normalized;
         return inputVector;
     }
+
+    // Méthode pour vérifier si le joueur est en train de sauter
+    public bool IlSaute() {
+        // Retourne vrai si le joueur est en train de sauter, faux sinon
+        bool saute = !toucheSol;
+        Debug.Log("Le joueur saute : " + saute); // Ajoutez cette ligne pour afficher le statut du saut
+        return saute;
+    }
+    public bool ToucheSol() {
+        // Retourne vrai si le joueur est au sol, sinon faux
+        return toucheSol;
+    }
 }

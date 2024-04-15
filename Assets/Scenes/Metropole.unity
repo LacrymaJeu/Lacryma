@@ -6505,12 +6505,12 @@ PrefabInstance:
     - target: {fileID: 1548748368563431571, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000008455769
+      value: 0.000000007828354
       objectReference: {fileID: 0}
     - target: {fileID: 1548748368563431571, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000015858301
+      value: -0.0000000014681619
       objectReference: {fileID: 0}
     - target: {fileID: 1748536789263968605, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
@@ -6535,7 +6535,7 @@ PrefabInstance:
     - target: {fileID: 2657713897656541010, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3282749803088900734, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
@@ -6680,17 +6680,17 @@ PrefabInstance:
     - target: {fileID: 5348780561631558287, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.17015186
+      value: 0.17015187
       objectReference: {fileID: 0}
     - target: {fileID: 5348780561631558287, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00000003613262
+      value: 0.000000039234504
       objectReference: {fileID: 0}
     - target: {fileID: 5348780561631558287, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.00000000623901
+      value: -0.000000006774613
       objectReference: {fileID: 0}
     - target: {fileID: 5689310271691453248, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
@@ -6715,12 +6715,12 @@ PrefabInstance:
     - target: {fileID: 5689310271691453248, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000008466506
+      value: 0.000000029328836
       objectReference: {fileID: 0}
     - target: {fileID: 5689310271691453248, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000001527471
+      value: -0.0000000052913145
       objectReference: {fileID: 0}
     - target: {fileID: 5767323008077214590, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
@@ -6750,17 +6750,17 @@ PrefabInstance:
     - target: {fileID: 7477202607824926211, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.17015186
+      value: 0.17015187
       objectReference: {fileID: 0}
     - target: {fileID: 7477202607824926211, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000015082636
+      value: 0.000000021477097
       objectReference: {fileID: 0}
     - target: {fileID: 7477202607824926211, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000026043152
+      value: -0.0000000037084449
       objectReference: {fileID: 0}
     - target: {fileID: 8965139740161553308, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
@@ -6776,6 +6776,14 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1859727036}
+    - targetCorrespondingSourceObject: {fileID: 5001574763270467421, guid: 8eaa4d661006cc84e82d616edbb055ca,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1859727042}
+    - targetCorrespondingSourceObject: {fileID: 5001574763270467421, guid: 8eaa4d661006cc84e82d616edbb055ca,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1859727043}
     - targetCorrespondingSourceObject: {fileID: 7926578599436728495, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       insertIndex: -1
@@ -12906,7 +12914,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1261653914}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: 71e0d22a661f01e4f994fed583fcc4b7, type: 3}
   m_Controller: {fileID: 9100000, guid: 2b3d53580791c09459c0cf59cf076eeb, type: 2}
   m_CullingMode: 0
@@ -13166,6 +13174,21 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1889891220}
+    - target: {fileID: 527762505888460700, guid: 2fb79ee2591ffba46b41046511295505,
+        type: 3}
+      propertyPath: dialogueStrings.Array.data[1].texte
+      value: "J'ai de la cr\xE8me glac\xE9e qui fait sentir bizarre"
+      objectReference: {fileID: 0}
+    - target: {fileID: 527762505888460700, guid: 2fb79ee2591ffba46b41046511295505,
+        type: 3}
+      propertyPath: dialogueStrings.Array.data[2].laFin
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 527762505888460700, guid: 2fb79ee2591ffba46b41046511295505,
+        type: 3}
+      propertyPath: dialogueStrings.Array.data[2].texte
+      value: "Si Redbull donne des ailes, alors ma cr\xE8me glac\xE9e donne un jetpack"
+      objectReference: {fileID: 0}
     - target: {fileID: 529341564028731405, guid: 2fb79ee2591ffba46b41046511295505,
         type: 3}
       propertyPath: m_Mesh
@@ -32403,6 +32426,41 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1859727030}
   m_Enabled: 1
+--- !u!114 &1859727042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859727030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36678208619ce6c4f89628bbfa4eaced, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1737651671}
+--- !u!95 &1859727043
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859727030}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 71e0d22a661f01e4f994fed583fcc4b7, type: 3}
+  m_Controller: {fileID: 9100000, guid: 2b3d53580791c09459c0cf59cf076eeb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!43 &1889891220
 Mesh:
   m_ObjectHideFlags: 0
