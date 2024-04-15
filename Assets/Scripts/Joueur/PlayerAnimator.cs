@@ -4,47 +4,54 @@ using UnityEngine;
 
 public class PlayerAnimator : MonoBehaviour {
 
-    // Noms des paramètres d'animation dans l'Animator
     private const string IL_MARCHE = "IlMarche";
     private const string IL_COURS = "IlCours";
     private const string IDLE = "Idle";
     private const string DEBUT_SAUT = "IlSaute";
     private const string MILIEU_SAUT = "IlTombe";
-    private const string FIN_SAUT = "IlToucheSol";
+    private const string FIN_SAUT = "IlTouche";
 
-    // Référence à l'Animator
     private Animator animator;
-
-    // Référence au script Player
     [SerializeField] private Player player;
+    private ControleJeu controleJeu;
 
-    // Dernière position enregistrée du joueur
     private Vector3 dernierePosition;
 
     private void Awake() {
-        // Initialisation de l'Animator
         animator = GetComponent<Animator>();
-        // Enregistrement de la position initiale du joueur
+        controleJeu = GetComponent<ControleJeu>();
         dernierePosition = player.transform.position;
     }
 
     private void Update() {
-        // Vérifie si le joueur bouge actuellement
-        bool estEnMouvement = player.transform.position != dernierePosition;
-        // Met à jour la dernière position du joueur
-        dernierePosition = player.transform.position;
+        bool estEnMouvement = player.IlMarche();
 
-
-        // Active l'animation de marche si le joueur bouge
         animator.SetBool(IL_MARCHE, estEnMouvement);
+        animator.SetBool(IL_COURS, player.IlCours()); // Utiliser la méthode IlCours du script Player
 
-        // Active l'animation de course si le joueur bouge et court
-        animator.SetBool(IL_COURS, estEnMouvement && player.IlCours());
-     
 
-        // Si le joueur ne bouge pas, jouer l'animation Idle
-        if (!estEnMouvement) {
+        if (!estEnMouvement && !controleJeu.IlSaute()) {
             animator.Play(IDLE);
         }
+
+        // Gérer les animations de saut
+        if (controleJeu == null) {
+            controleJeu = player.GetComponent<ControleJeu>(); // Assurez-vous d'obtenir la référence correctement
+        }
+
+        if (controleJeu != null) {
+            // Activer l'animation de début de saut lorsque le joueur commence à sauter
+            animator.SetBool(DEBUT_SAUT, controleJeu.IlSaute());
+
+            // Activer l'animation de milieu de saut lorsque le joueur est en l'air
+            animator.SetBool(MILIEU_SAUT, !controleJeu.ToucheSol() && controleJeu.IlSaute());
+
+            // Activer l'animation de fin de saut lorsque le joueur touche le sol
+            animator.SetBool(FIN_SAUT, controleJeu.ToucheSol());
+        }
     }
+
+
+
+
 }

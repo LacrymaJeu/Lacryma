@@ -8,16 +8,16 @@ public class GameInput : MonoBehaviour {
     // Distance de vérification pour déterminer si le joueur est au sol
     [SerializeField] private float groundCheckDistance = 0.1f;
 
-    // Référence au script Player
-    public Player playerScript;
-
     // Référence au Rigidbody du joueur
     private Rigidbody playerRigidBody;
 
     // Le joueur touche-t-il le sol ?
     public bool isGrounded = true;
 
-
+    private void Start() {
+        // Initialiser la référence au Rigidbody du joueur
+        playerRigidBody = GetComponent<Rigidbody>();
+    }
 
     // Méthode appelée à chaque frame physique
     private void FixedUpdate() {
@@ -48,8 +48,14 @@ public class GameInput : MonoBehaviour {
     }
 
     // Méthode pour vérifier si le joueur est en train de sauter
-    public bool IsJumping() {
+    public bool IlSaute() {
         // Retourne vrai si le joueur est en train de sauter, faux sinon
-        return !isGrounded;
+        bool saute = !isGrounded;
+        Debug.Log("Le joueur saute : " + saute); // Ajoutez cette ligne pour afficher le statut du saut
+        return saute;
+    }
+    public bool IsGrounded() {
+        // Retourne vrai si le joueur est au sol, sinon faux
+        return isGrounded;
     }
 }
