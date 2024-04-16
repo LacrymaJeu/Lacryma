@@ -30,9 +30,9 @@ public class PlayerAnimator : MonoBehaviour {
         animator.SetBool(IL_COURS, player.IlCours()); // Utiliser la méthode IlCours du script Player
 
 
-        if (!estEnMouvement && !controleJeu.IlSaute()) {
-            animator.Play(IDLE);
-        }
+       // if (!estEnMouvement && !controleJeu.IlSaute()) {
+         //   animator.Play(IDLE);
+       // }
 
         // Gérer les animations de saut
         if (controleJeu == null) {

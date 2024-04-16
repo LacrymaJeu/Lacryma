@@ -51,6 +51,7 @@ public class ControleJeu : MonoBehaviour {
         playerInputActions = new PlayerInputActions();
         playerInputActions.Player.Enable();
 
+
         // Récupération du composant Rigidbody attaché à cet objet
         joueurRigidBody = GetComponent<Rigidbody>();
 
@@ -169,7 +170,6 @@ public void DebutSprint(InputAction.CallbackContext context) {
     public bool IlSaute() {
         // Retourne vrai si le joueur est en train de sauter, faux sinon
         bool saute = !toucheSol;
-        Debug.Log("Le joueur saute : " + saute); // Ajoutez cette ligne pour afficher le statut du saut
         return saute;
     }
     public bool ToucheSol() {

@@ -7185,12 +7185,12 @@ PrefabInstance:
     - target: {fileID: 1548748368563431571, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000008455769
+      value: -0.000000008455769
       objectReference: {fileID: 0}
     - target: {fileID: 1548748368563431571, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000015858301
+      value: 0.0000000015858301
       objectReference: {fileID: 0}
     - target: {fileID: 1748536789263968605, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
@@ -7365,12 +7365,12 @@ PrefabInstance:
     - target: {fileID: 5348780561631558287, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000039002334
+      value: -0.000000039002334
       objectReference: {fileID: 0}
     - target: {fileID: 5348780561631558287, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.000000006734524
+      value: 0.000000006734524
       objectReference: {fileID: 0}
     - target: {fileID: 5689310271691453248, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
@@ -7435,12 +7435,12 @@ PrefabInstance:
     - target: {fileID: 7477202607824926211, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000021049983
+      value: -0.000000021049983
       objectReference: {fileID: 0}
     - target: {fileID: 7477202607824926211, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000036346959
+      value: 0.0000000036346959
       objectReference: {fileID: 0}
     - target: {fileID: 8965139740161553308, guid: 8eaa4d661006cc84e82d616edbb055ca,
         type: 3}
@@ -14973,6 +14973,16 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1318611784}
+    - target: {fileID: 527762505888460700, guid: 2fb79ee2591ffba46b41046511295505,
+        type: 3}
+      propertyPath: dialogueStrings.Array.data[1].texte
+      value: "J'ai de la cr\xE8me glac\xE9e  fait sentir bizarre..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 527762505888460700, guid: 2fb79ee2591ffba46b41046511295505,
+        type: 3}
+      propertyPath: dialogueStrings.Array.data[2].texte
+      value: "si Redbull donne des ailes, alors ma cr\xE8me glac\xE9e donne un jetpack"
+      objectReference: {fileID: 0}
     - target: {fileID: 529341564028731405, guid: 2fb79ee2591ffba46b41046511295505,
         type: 3}
       propertyPath: m_Mesh
