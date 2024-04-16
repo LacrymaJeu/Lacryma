@@ -46,7 +46,7 @@ public class Player : MonoBehaviour {
             // Applique le déplacement
 
             float moveDistance = vitesseDep * Time.deltaTime;
-            float joueurRadius = .3f;
+            float joueurRadius = 0.3f;
             float playerHeight = 2f;
             bool canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, joueurRadius, moveDir, moveDistance);
             if (canMove)

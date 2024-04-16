@@ -3035,6 +3035,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Money (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 06175cfee688f5344a660f847b47fb85,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3269,6 +3274,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BriefcaseGrey
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 12fd7b745f6bfd1409631096ed97192c,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3343,11 +3353,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: ToolboxRed
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 06ad15d7819965f47936bc40e4e8be40,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589046982474801644, guid: 06ad15d7819965f47936bc40e4e8be40,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3736433677783930136, guid: 06ad15d7819965f47936bc40e4e8be40,
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 69d3374ab1ede774b99f83474472a2c7, type: 2}
+    - target: {fileID: 5508019036124745535, guid: 06ad15d7819965f47936bc40e4e8be40,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5962788630873410025, guid: 06ad15d7819965f47936bc40e4e8be40,
         type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -4780,6 +4805,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Money
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 06175cfee688f5344a660f847b47fb85,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5554,6 +5584,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Money (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 06175cfee688f5344a660f847b47fb85,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6032,6 +6067,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Money (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 06175cfee688f5344a660f847b47fb85,
+        type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
