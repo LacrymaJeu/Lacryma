@@ -12,7 +12,7 @@ public class ControleJeu : MonoBehaviour {
     // Distance de vérification pour déterminer si le joueur est au sol
     [SerializeField] private float groundCheckDistance = 0.1f;
     //grosseur du box cast
-    float boxCastSize = 0.5f;
+    [SerializeField] private float boxCastSize = 1f;
 
     [SerializeField] private float maxJumpVelocity = .2f;
 
