@@ -37,7 +37,7 @@ public class Player : MonoBehaviour {
 
     private void Update() {
         // Vérifie si le joueur est en dialogue
-        if (peutBougerDialogue) {
+       if (peutBougerDialogue) {
             // Récupère le vecteur de déplacement normalisé du gameInput
             Vector2 inputVector = gameInput.GetMovementVectorNormalized();
 
