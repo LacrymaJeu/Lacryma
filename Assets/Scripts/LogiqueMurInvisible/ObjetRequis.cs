@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Quand l'objet requis rentre dans la zone du is trigger le mur invisible disparaît et le joueur peut avancer
+
 public class ObjetRequis : MonoBehaviour
 {
     public GameObject objetDesBandits; // Objet que les bandits veulent
