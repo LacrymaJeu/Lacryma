@@ -1,13 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
-// Active le script qui permet au joueur de tenir des objets
+// Permet le joueur de ramasser des objets après que l'objet a été ramasser et un texte apparaît aussi pour 3 secondes
 
 public class DroitDeTenirObjet : MonoBehaviour
 {
     public GameObject joueur; // Script à activer sur le joueur
-    public GameObject objetADisparaitre; // Objet à faire disparaître
+    public GameObject objetADesactiver; // Objet à désactiver
+    public TextMeshProUGUI texteTMP; // TextMeshProUGUI à afficher
 
     private void OnCollisionEnter(Collision other)
     {
@@ -16,9 +18,50 @@ public class DroitDeTenirObjet : MonoBehaviour
             joueur.GetComponent<JoueurRamasseLache>().enabled = true;
             Debug.Log("Le script sur le joueur a été activé.");
 
-            // Fait disparaître l'objet
-            Destroy(objetADisparaitre);
-            Debug.Log("L'objet a été détruit.");
+            // Désactive le Collider et le Mesh Renderer de l'objet
+            DesactiverObjet();
+
+            // Affiche le texte
+            StartCoroutine(AfficherEtCacherTexte());
         }
+    }
+
+    void DesactiverObjet()
+    {
+        // Désactive le Collider
+        Collider colliderObjet = objetADesactiver.GetComponent<Collider>();
+        if (colliderObjet != null)
+        {
+            colliderObjet.enabled = false;
+            Debug.Log("Le collider de l'objet a été désactivé.");
+        }
+        else
+        {
+            Debug.LogWarning("Collider non trouvé sur l'objet.");
+        }
+
+        // Désactive le Mesh Renderer
+        Renderer rendererObjet = objetADesactiver.GetComponent<Renderer>();
+        if (rendererObjet != null)
+        {
+            rendererObjet.enabled = false;
+            Debug.Log("Le Mesh Renderer de l'objet a été désactivé.");
+        }
+        else
+        {
+            Debug.LogWarning("Renderer non trouvé sur l'objet.");
+        }
+    }
+
+    IEnumerator AfficherEtCacherTexte()
+    {
+        // Active le texte
+        texteTMP.gameObject.SetActive(true);
+
+        // Attend 3 secondes
+        yield return new WaitForSeconds(3f);
+
+        // Désactive le texte
+        texteTMP.gameObject.SetActive(false);
     }
 }
