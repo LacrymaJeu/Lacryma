@@ -58,8 +58,8 @@ public class DroitDeTenirObjet : MonoBehaviour
         // Active le texte
         texteTMP.gameObject.SetActive(true);
 
-        // Attend 3 secondes
-        yield return new WaitForSeconds(3f);
+        // Attend 6 secondes
+        yield return new WaitForSeconds(6f);
 
         // Désactive le texte
         texteTMP.gameObject.SetActive(false);
