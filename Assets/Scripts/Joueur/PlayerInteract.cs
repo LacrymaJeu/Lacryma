@@ -46,8 +46,28 @@ public class PlayerInteract : MonoBehaviour
                 if (collider.TryGetComponent(out DeclencheurDialogue npcInteraction)) {
                     return npcInteraction;
                 }
-            }
+        }
         
         return null;
     }
+    public SwitchInteractTemps GetInterationSwitch() {
+        // distance des colliders avec lesquels le joueur peut interagir
+        float interactRange = 2f;
+
+        // Interaction avec tous les colliders autour du joueur
+        Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
+
+        // Chercher tous les colliders interactifs
+        foreach (Collider collider in colliderArray) {
+            // Vérifier si le collider possède un composant SwitchInteractTemps
+            if (collider.TryGetComponent(out SwitchInteractTemps switchInteractableTemps)) {
+                // Retourner l'objet SwitchInteractTemps dès qu'on en trouve un
+                return switchInteractableTemps;
+            }
+        }
+
+        // Retourner null s'il n'y a pas d'objet SwitchInteractTemps à portée
+        return null;
+    }
+
 }

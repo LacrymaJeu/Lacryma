@@ -8,7 +8,7 @@ public class NPCInteractionUI : MonoBehaviour
     [SerializeField] private PlayerInteract joueurInteract;
 
     private void Update() {
-        if (joueurInteract.GetInterationObject() != null){
+        if (joueurInteract.GetInterationObject() || joueurInteract.GetInterationSwitch() != null){
             Apparait();
         } else {
             Disparait();
