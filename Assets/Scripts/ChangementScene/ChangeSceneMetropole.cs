@@ -3,19 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// Change la scène au désert
 public class ChangeSceneMetropole : MonoBehaviour
 {
-    // Nom de la scène à charger
-    public string sceneNom;
+    public GameObject player; // Variable pour stocker le joueur
 
     private void OnTriggerEnter(Collider other)
     {
         // Vérifie si le joueur entre dans le trigger
-        if (other.CompareTag("Player"))
+        if (other.gameObject == player)
         {
             // Charge la scène spécifiée
-            SceneManager.LoadScene(sceneNom);
+            SceneManager.LoadScene(5);
         }
     }
 }
