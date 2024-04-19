@@ -33,6 +33,8 @@ public class Player : MonoBehaviour {
 
     private void Awake() {
         joueurRigidbody = GetComponent<Rigidbody>();
+        Cursor.lockState = CursorLockMode.Locked; // Verrouille le curseur.
+        Cursor.visible = false; // Cache le curseur.
     }
 
     private void Update() {

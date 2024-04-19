@@ -19,6 +19,7 @@ public class GestionDialogue : MonoBehaviour
     private Transform cameraJoueur; // Référence à la caméra du joueur.
     private int dialogueIndex = 0; // Index du dialogue en cours.
     public static bool enDialogue = false; // Indique si le joueur est en dialogue avec le NPC.
+    public TextMeshProUGUI npcNomText; // Element UI pour afficher le nom du NPC
 
 
     private void Start()
@@ -120,6 +121,12 @@ public class GestionDialogue : MonoBehaviour
         Cursor.visible = false; // Cache le curseur.
 
         ResetEtatDialogue();
+    }
+    // Permet de mettre le nom du NPC
+    public void MetNpcNom(string name)
+    {
+        if (npcNomText != null)
+            npcNomText.text = name;
     }
 
     // Réinitialise l'état de dialogue.
