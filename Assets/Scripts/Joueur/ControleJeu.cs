@@ -12,7 +12,7 @@ public class ControleJeu : MonoBehaviour {
     // Distance de vérification pour déterminer si le joueur est au sol
     [SerializeField] private float groundCheckDistance = 0.1f;
     //grosseur du box cast
-    float boxCastSize = 0.5f;
+    [SerializeField] private float boxCastSize = 1f;
 
     [SerializeField] private float maxJumpVelocity = .2f;
 
@@ -50,6 +50,7 @@ public class ControleJeu : MonoBehaviour {
         // Initialisation du gestionnaire d'actions du joueur
         playerInputActions = new PlayerInputActions();
         playerInputActions.Player.Enable();
+
 
         // Récupération du composant Rigidbody attaché à cet objet
         joueurRigidBody = GetComponent<Rigidbody>();
@@ -143,7 +144,7 @@ public void DebutSprint(InputAction.CallbackContext context) {
     // Augmenter moveSpeed uniquement si le joueur est au sol ou s'il sprinte déjà dans les airs
     if (toucheSol || joueurSprint) {
         if (scriptJoueur != null) {
-            scriptJoueur.vitesseDep += 3; // moveSpeed + 3
+            scriptJoueur.vitesseDep += 2; // moveSpeed + 2
         }
     }
 }
@@ -163,5 +164,16 @@ public void DebutSprint(InputAction.CallbackContext context) {
         Vector2 inputVector = playerInputActions.Player.Move.ReadValue<Vector2>();
         inputVector = inputVector.normalized;
         return inputVector;
+    }
+
+    // Méthode pour vérifier si le joueur est en train de sauter
+    public bool IlSaute() {
+        // Retourne vrai si le joueur est en train de sauter, faux sinon
+        bool saute = !toucheSol;
+        return saute;
+    }
+    public bool ToucheSol() {
+        // Retourne vrai si le joueur est au sol, sinon faux
+        return toucheSol;
     }
 }

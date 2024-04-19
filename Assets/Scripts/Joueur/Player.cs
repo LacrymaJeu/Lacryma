@@ -7,16 +7,16 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
     // Référence au composant Rigidbody
-    private Rigidbody joueurRigidbody; 
+    private Rigidbody joueurRigidbody;
 
     // Référence à la caméra
     public Transform cam;
 
     // Vitesse de déplacement du joueur
-    public float vitesseDep = 5f; 
+    public float vitesseDep = 5f;
 
     // Référence à l'input du jeu
-    [SerializeField] private ControleJeu gameInput; 
+    [SerializeField] private ControleJeu gameInput;
 
     // Indique si le joueur est en train de marcher
     private bool ilMarche;
@@ -24,57 +24,74 @@ public class Player : MonoBehaviour {
     // Indique si le joueur est en train de courir
     private bool ilCours;
 
- 
-
+    // Booléen indiquant si le joueur est en mesure de bouger pendant un dialogue
     public static bool peutBougerDialogue = true;
 
+    // Constantes pour les hauteurs de saut et la marge pour le saut
+    private const float hauteurSaut = 2f;
+    private const float margeSaut = 0.1f;
 
     private void Awake() {
         joueurRigidbody = GetComponent<Rigidbody>();
     }
+
     private void Update() {
         // Vérifie si le joueur est en dialogue
-        if (peutBougerDialogue)
-        {
+        if (peutBougerDialogue) {
             // Récupère le vecteur de déplacement normalisé du gameInput
-            Vector2 inputVector = gameInput.GetMovementVectorNormalized(); // Variable doit être en anglais
+            Vector2 inputVector = gameInput.GetMovementVectorNormalized();
 
             // Convertit le vecteur d'input en espace monde relatif à la caméra
             Vector3 camForward = Vector3.Scale(cam.forward, new Vector3(1, 0, 1)).normalized;
             Vector3 moveDir = camForward * inputVector.y + cam.right * inputVector.x;
 
             // Applique le déplacement
-
             float moveDistance = vitesseDep * Time.deltaTime;
-            float joueurRadius = .3f;
+            float joueurRadius = 0.3f;
             float playerHeight = 2f;
             bool canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, joueurRadius, moveDir, moveDistance);
-            if (canMove)
-            {
+
+            // Permet de bouger diagonalement quand le personnage est bloqué par un mur
+            if (!canMove) {
+                Vector3 moveDirX = new Vector3(moveDir.x, 0, 0);
+                canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, joueurRadius, moveDirX, moveDistance);
+                if (canMove) {
+                    moveDir = moveDirX;
+                } else {
+                    Vector3 moveDirZ = new Vector3(0, 0, moveDir.z);
+                    canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, joueurRadius, moveDirZ, moveDistance);
+
+                    if (canMove) {
+                        moveDir = moveDirZ;
+                    } else {
+                        // Vérification si le joueur peut sauter même s'il est bloqué par un mur
+                        bool canJump = Physics.Raycast(transform.position, Vector3.down, playerHeight / hauteurSaut + margeSaut);
+                        if (canJump) {
+                            moveDir = Vector3.zero;
+                        }
+                    }
+                }
+            }
+
+            // Déplace le joueur si le mouvement est autorisé
+            if (canMove) {
                 transform.position += moveDir * vitesseDep * Time.deltaTime;
             }
 
             // Oriente le joueur vers la direction de la caméra
-            if (moveDir.magnitude > 0.1f)
-            {
+            if (moveDir.magnitude > 0.1f) {
                 Quaternion targetRotation = Quaternion.LookRotation(moveDir, Vector3.up);
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
             }
 
             // Gestion de l'animation marche
             ilMarche = moveDir != Vector3.zero;
-
             ilCours = vitesseDep > 5f;
         }
-           
+    }
 
-           
-    } 
-                 
-        
-
-     //verification si le joueur marche ou pas
-     public bool IlMarche() {
+    // Vérifie si le joueur marche
+    public bool IlMarche() {
         return ilMarche;
     }
 
@@ -82,5 +99,4 @@ public class Player : MonoBehaviour {
     public bool IlCours() {
         return ilCours;
     }
-
 }
