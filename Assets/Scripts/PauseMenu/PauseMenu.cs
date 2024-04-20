@@ -46,7 +46,6 @@ public class PauseMenu : MonoBehaviour
         Cursor.visible = false; // Cache le curseur.
         Time.timeScale = 1f;
         enPause = false;
-        print("allo");
     }
     // Aller au menu principale du jeu
     public void VaAuMenuPrincipale()

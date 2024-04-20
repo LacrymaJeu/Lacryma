@@ -3,65 +3,52 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-// Permet le joueur de ramasser des objets après que l'objet a été ramasser et un texte apparaît aussi pour 3 secondes
+// Permet le joueur de ramasser des objets après que l'objet a été ramassé et un texte apparait aussi pour 6 secondes
 
 public class DroitDeTenirObjet : MonoBehaviour
 {
-    public GameObject joueur; // Script à activer sur le joueur
-    public GameObject objetADesactiver; // Objet à désactiver
-    public TextMeshProUGUI texteTMP; // TextMeshProUGUI à afficher
+    public GameObject joueur;
+    public GameObject[] objetsADesactiver; // Tableau d'objets à désactiver
+    public TextMeshProUGUI texteTMP;
 
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             joueur.GetComponent<JoueurRamasseLache>().enabled = true;
-            Debug.Log("Le script sur le joueur a été activé.");
-
-            // Désactive le Collider et le Mesh Renderer de l'objet
-            DesactiverObjet();
-
+            // Désactive les objets du tableau
+            DesactiverObjets();
             // Affiche le texte
             StartCoroutine(AfficherEtCacherTexte());
         }
     }
 
-    void DesactiverObjet()
+    void DesactiverObjets()
     {
-        // Désactive le Collider
-        Collider colliderObjet = objetADesactiver.GetComponent<Collider>();
-        if (colliderObjet != null)
+        foreach (GameObject objet in objetsADesactiver)
         {
-            colliderObjet.enabled = false;
-            Debug.Log("Le collider de l'objet a été désactivé.");
-        }
-        else
-        {
-            Debug.LogWarning("Collider non trouvé sur l'objet.");
-        }
-
-        // Désactive le Mesh Renderer
-        Renderer rendererObjet = objetADesactiver.GetComponent<Renderer>();
-        if (rendererObjet != null)
-        {
-            rendererObjet.enabled = false;
-            Debug.Log("Le Mesh Renderer de l'objet a été désactivé.");
-        }
-        else
-        {
-            Debug.LogWarning("Renderer non trouvé sur l'objet.");
+            if (objet != null)
+            {
+                // Désactive le Collider
+                Collider colliderObjet = objet.GetComponent<Collider>();
+                if (colliderObjet != null)
+                {
+                    colliderObjet.enabled = false;
+                }
+                // Désactive le Mesh Renderer
+                Renderer rendererObjet = objet.GetComponent<Renderer>();
+                if (rendererObjet != null)
+                {
+                    rendererObjet.enabled = false;
+                }
+            }
         }
     }
 
     IEnumerator AfficherEtCacherTexte()
     {
-        // Active le texte
         texteTMP.gameObject.SetActive(true);
-
-        // Attend 6 secondes
         yield return new WaitForSeconds(6f);
-
-        // Désactive le texte
         texteTMP.gameObject.SetActive(false);
     }
 }
