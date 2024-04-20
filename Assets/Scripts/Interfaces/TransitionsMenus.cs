@@ -3,26 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MenuDepart : MonoBehaviour
+public class TransitionsMenus : MonoBehaviour
 {
     public static GameObject MenuActif;
     static GameObject NouveauMenu;
-    public Button Options;
     public GameObject MenuPrincipal;
 
     // Start is called before the first frame update
     void Start()
     {
-        MenuActif = MenuPrincipal;
+        if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == 0)
+        {
+            MenuActif = MenuPrincipal;
+        } else if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == 1 || UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == 2 || UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            MenuActif = GameObject.Find("MenuPause");
+        }
+        
     }
     // Update is called once per frame
     void Update()
     {
     }
 
-    public void DemarrerJeu()
+    public void ChangementScene(int Scene)
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene(1);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(Scene);
     }
 
     public void DeterminerNouveauMenu(GameObject CibleMenu)
@@ -31,7 +37,7 @@ public class MenuDepart : MonoBehaviour
     }
 
     public void TransitionMenu()
-    {
+    {   
         MenuActif.SetActive(false);
         NouveauMenu.SetActive(true);
         MenuActif = NouveauMenu;
