@@ -4,6 +4,8 @@ using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Logique du menu
+
 public class TransitionsMenus : MonoBehaviour
 {
     // Variables statiques pour stocker les etats des menus
@@ -60,7 +62,6 @@ public class TransitionsMenus : MonoBehaviour
         Cursor.visible = false; // Cache le curseur.
         Time.timeScale = 1f;
         enPause = false;
-        print("allo");
     }
 
     // Permet de mettre en pause
@@ -68,7 +69,7 @@ public class TransitionsMenus : MonoBehaviour
     {
         DeterminerNouveauMenu(pauseMenu);
         TransitionMenu();
-        Cursor.lockState = CursorLockMode.None; // D�verrouille le curseur.
+        Cursor.lockState = CursorLockMode.None; // Déverrouille le curseur.
         Cursor.visible = true; // Rend le curseur visible.
         Time.timeScale = 0f;
         enPause = true;
