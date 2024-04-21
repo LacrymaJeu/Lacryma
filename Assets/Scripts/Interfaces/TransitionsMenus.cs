@@ -82,15 +82,16 @@ public class TransitionsMenus : MonoBehaviour
         {
             NouveauMenu = UIJeu;
         }
-        else if (Scene == 5)
-        {
-            MenuActif.SetActive(false);
-        } else if (Scene == 0)
+        else if (Scene == 0 || Scene == 5)
         {
             NouveauMenu = MenuPrincipal;
             Destroy(UIComplet);
         }
         TransitionMenu();
+        // if(Scene == 5)
+        // {
+        //     Destroy(UIComplet);
+        // }
         UnityEngine.SceneManagement.SceneManager.LoadScene(Scene);
         enPause = false;
     }
@@ -115,7 +116,7 @@ public class TransitionsMenus : MonoBehaviour
             MenuActif = NouveauMenu;
         }
     }
-
+    // Retour au menu precedent
     public void RetourMenuPrecedent()
     {
         DeterminerNouveauMenu(MenuPrecedent);
@@ -125,7 +126,7 @@ public class TransitionsMenus : MonoBehaviour
     public void DesactiverTransition()
     {
         transition.SetActive(false);
-    }
+    }      
 
     // Quitter le jeu au complet
         public void QuitJeu()
