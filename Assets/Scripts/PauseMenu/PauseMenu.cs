@@ -33,12 +33,12 @@ public class PauseMenu : MonoBehaviour
     public void PauseJeu()
     {
         pauseMenu.SetActive(true);
-        Cursor.lockState = CursorLockMode.None; // Déverrouille le curseur.
+        Cursor.lockState = CursorLockMode.None; // Dï¿½verrouille le curseur.
         Cursor.visible = true; // Rend le curseur visible.
         Time.timeScale = 0f;
         enPause = true;
     }
-    // Permet de résumer le jeu
+    // Permet de rï¿½sumer le jeu
     public void ResumeJeu()
     {
         pauseMenu.SetActive(false);
@@ -55,6 +55,7 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(0);
         enPause = false;
     }
+    
     // Quitter le jeu au complet
     public void QuitJeu()
     {
