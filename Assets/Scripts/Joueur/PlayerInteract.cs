@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Permet au joueur d'interagir avec des objets dans son environnement en appuyant sur la touche E,
+// activant différentes actions en fonction des composants attachés aux objets détectés.
+
 public class PlayerInteract : MonoBehaviour
 {
     private void Update() {

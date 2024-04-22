@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Gère les animations du joueur en fonction de ses actions telles que la marche, la course et le saut, en utilisant un contrôle de jeu et une instance de Player.
+
 public class PlayerAnimator : MonoBehaviour {
 
     private const string IL_MARCHE = "IlMarche";
