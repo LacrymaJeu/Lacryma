@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: 1ddc58833c1a31643b6a345367935d53
+AssetOrigin:
+  serializedVersion: 1
+  productId: 19370
+  packageName: Tent Pack
+  packageVersion: v1
+  assetPath: Assets/TentPack/Objects/tent_red_06.fbx
+  uploadId: 8439
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable:
@@ -53,7 +60,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importPhysicalCameras: 0
@@ -123,10 +130,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 19370
-  packageName: Tent Pack
-  packageVersion: v1
-  assetPath: Assets/TentPack/Objects/tent_red_06.fbx
-  uploadId: 8439
