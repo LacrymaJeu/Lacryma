@@ -1180,6 +1180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boutons: {fileID: 80642998}
   lumiere: {fileID: 0}
+  credits: {fileID: 0}
 --- !u!1 &459258465
 GameObject:
   m_ObjectHideFlags: 0
@@ -2419,6 +2420,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boutons: {fileID: 0}
   lumiere: {fileID: 0}
+  credits: {fileID: 0}
 --- !u!1 &1167164367
 GameObject:
   m_ObjectHideFlags: 0
@@ -2491,7 +2493,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Directeur artistique
+  m_text: Directrice artistique
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3085,6 +3087,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   boutons: {fileID: 80642998}
   lumiere: {fileID: 458475733}
+  credits: {fileID: 880972468}
 --- !u!1 &1661932690
 GameObject:
   m_ObjectHideFlags: 0
