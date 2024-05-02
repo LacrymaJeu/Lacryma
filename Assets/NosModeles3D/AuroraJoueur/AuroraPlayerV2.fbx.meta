@@ -1,0 +1,1003 @@
+fileFormatVersion: 2
+guid: df45e1090d2d22d44b0bc380852e1728
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Aurora1_Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_LeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_RightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: pastilles
+      humanName: LeftEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: masque
+      humanName: RightEye
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: centre
+      humanName: Jaw
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_LeftHandThumb1
+      humanName: Left Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_LeftHandThumb2
+      humanName: Left Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_LeftHandThumb3
+      humanName: Left Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_LeftHandIndex1
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_LeftHandIndex2
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_LeftHandIndex3
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_LeftHandMiddle1
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_LeftHandMiddle2
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_LeftHandMiddle3
+      humanName: Left Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_LeftHandRing1
+      humanName: Left Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_LeftHandRing2
+      humanName: Left Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_LeftHandRing3
+      humanName: Left Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_LeftHandPinky1
+      humanName: Left Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_LeftHandPinky2
+      humanName: Left Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_LeftHandPinky3
+      humanName: Left Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_RightHandThumb1
+      humanName: Right Thumb Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_RightHandThumb2
+      humanName: Right Thumb Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_RightHandThumb3
+      humanName: Right Thumb Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_RightHandIndex1
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_RightHandIndex2
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_RightHandIndex3
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_RightHandMiddle1
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_RightHandMiddle2
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_RightHandMiddle3
+      humanName: Right Middle Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_RightHandRing1
+      humanName: Right Ring Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_RightHandRing2
+      humanName: Right Ring Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_RightHandRing3
+      humanName: Right Ring Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_RightHandPinky1
+      humanName: Right Little Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_RightHandPinky2
+      humanName: Right Little Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_RightHandPinky3
+      humanName: Right Little Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Aurora1_Spine2
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: AuroraPlayer(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora
+      parentName: AuroraPlayer(Clone)
+      position: {x: -0, y: 0.8845709, z: -0.01145059}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.01, y: 0.01, z: 0.01}
+    - name: Pochette
+      parentName: Aurora
+      position: {x: -5.2768, y: 11.930122, z: 12.621891}
+      rotation: {x: -0.051719874, y: -0.16417661, z: -0.058554932, w: 0.98333234}
+      scale: {x: 3.4915197, y: 5.9596705, z: 1.4427986}
+    - name: Corps
+      parentName: Aurora
+      position: {x: -0, y: -88.457085, z: 1.145059}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ceinture
+      parentName: Aurora
+      position: {x: -0, y: -88.457085, z: 1.145059}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DetailsCeinture
+      parentName: Aurora
+      position: {x: -0, y: -88.457085, z: 1.145059}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: attaches
+      parentName: DetailsCeinture
+      position: {x: 3.3900628, y: 108.26694, z: 12.004129}
+      rotation: {x: 0.05403568, y: 0.08460763, z: 0.004595094, w: 0.9949375}
+      scale: {x: 4.7860837, y: 1.9761224, z: 1}
+    - name: Boucle
+      parentName: DetailsCeinture
+      position: {x: -0, y: 108.26685, z: 11.930044}
+      rotation: {x: 0.054230712, y: -0, z: -0, w: 0.9985285}
+      scale: {x: 4.7860837, y: 4.4556684, z: 1}
+    - name: chaussures
+      parentName: Aurora
+      position: {x: -0.43321085, y: -88.457085, z: 1.145059}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Coat
+      parentName: Aurora
+      position: {x: -0, y: -88.457085, z: 1.145059}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_Reference
+      parentName: AuroraPlayer(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.01, y: 0.01, z: 0.01}
+    - name: Aurora1_Hips
+      parentName: Aurora1_Reference
+      position: {x: -2.2737357e-13, y: 95.0813, z: -0.00000035762764}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_LeftUpLeg
+      parentName: Aurora1_Hips
+      position: {x: -9.406444, y: -7.346237, z: -1.7364173}
+      rotation: {x: -0.0000019628835, y: -0.0000005964239, z: 0.0040795477, w: 0.9999917}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_LeftLeg
+      parentName: Aurora1_LeftUpLeg
+      position: {x: 0.9897883, y: -39.661182, z: -2.0866435}
+      rotation: {x: -0.00000081517703, y: 0.00000077175486, z: 0.0000014681813, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_LeftFoot
+      parentName: Aurora1_LeftLeg
+      position: {x: 2.0212374, y: -40.700886, z: -4.4411974}
+      rotation: {x: 0.1131098, y: 0.64837, z: 0.123328626, w: 0.74270624}
+      scale: {x: 1, y: 1, z: 1}
+    - name: DetailChaussureGauche
+      parentName: Aurora1_LeftFoot
+      position: {x: -0.6771933, y: 0.5081864, z: 0.35548976}
+      rotation: {x: -0.4195648, y: 0.59173566, z: 0.56151617, w: -0.398138}
+      scale: {x: 3.36223, y: 3.962257, z: 3.36223}
+    - name: Aurora1_LeftToeBase
+      parentName: Aurora1_LeftFoot
+      position: {x: -18.984571, y: -0.0000027677356, z: 0.0000016576979}
+      rotation: {x: -0.11310731, y: -0.6483706, z: -0.12332729, w: 0.7427063}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_RightUpLeg
+      parentName: Aurora1_Hips
+      position: {x: 9.406448, y: -7.346199, z: -1.7364186}
+      rotation: {x: -0.6955859, y: 0.7184429, z: 0.0000127128205, w: 0.000012140188}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_RightLeg
+      parentName: Aurora1_RightUpLeg
+      position: {x: 39.673744, y: 0.031070085, z: 2.083788}
+      rotation: {x: 0.0000010642289, y: 0.00003413389, z: 0.010886193, w: 0.99994075}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_RightFoot
+      parentName: Aurora1_RightLeg
+      position: {x: 40.750793, y: 0.1500589, z: 4.441211}
+      rotation: {x: 0.54700434, y: 0.366012, z: -0.45190698, w: 0.60216403}
+      scale: {x: 1, y: 1, z: 1}
+    - name: detailChaussureDroite
+      parentName: Aurora1_RightFoot
+      position: {x: -0.70893043, y: -0.022172175, z: -11.247667}
+      rotation: {x: 0.661471, y: 0.46901006, z: 0.33849388, w: 0.4773968}
+      scale: {x: 3.36223, y: 3.962257, z: 3.36223}
+    - name: Aurora1_RightToeBase
+      parentName: Aurora1_RightFoot
+      position: {x: 18.98456, y: -0.00002773741, z: 0.000007850438}
+      rotation: {x: -0.11310731, y: -0.6483706, z: -0.12332729, w: 0.7427063}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_Spine
+      parentName: Aurora1_Hips
+      position: {x: 2.524355e-29, y: 7, z: 0}
+      rotation: {x: 0, y: -0, z: -0.7071068, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_Spine1
+      parentName: Aurora1_Spine
+      position: {x: -14.274887, y: -3.3881318e-21, z: 0}
+      rotation: {x: 0, y: 0, z: 7.771561e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_Spine2
+      parentName: Aurora1_Spine1
+      position: {x: -14.274887, y: -2.2088105e-29, z: 0}
+      rotation: {x: 0.04045161, y: -0.014641216, z: 0.3400221, w: 0.939433}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_LeftShoulder
+      parentName: Aurora1_Spine2
+      position: {x: -10.613514, y: -0.00000019095444, z: 0.00000009959427}
+      rotation: {x: 0.03302865, y: -0.10275142, z: 0.480947, w: 0.8700812}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_LeftArm
+      parentName: Aurora1_LeftShoulder
+      position: {x: -12.639522, y: 0.0000037765108, z: 0.0000008042685}
+      rotation: {x: 0.013382578, y: 0.17520182, z: -0.089230224, w: 0.98038936}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_LeftForeArm
+      parentName: Aurora1_LeftArm
+      position: {x: -20.795969, y: -0.0004300426, z: 0.00081983244}
+      rotation: {x: 0.06568425, y: 0.009632794, z: 0.0019718693, w: 0.997792}
+      scale: {x: 1, y: 1, z: 1}
+    - name: PlatingGauche
+      parentName: Aurora1_LeftForeArm
+      position: {x: -15.999367, y: 3.4843674, z: -0.70487785}
+      rotation: {x: -0.027297867, y: -0.08344163, z: -0.29868415, w: 0.9503053}
+      scale: {x: 1, y: 1, z: 0.97217923}
+    - name: BaseGauche
+      parentName: PlatingGauche
+      position: {x: 0.2958126, y: -0.18706131, z: 0.48509872}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: deco3
+      parentName: PlatingGauche
+      position: {x: -0.8584938, y: 1.4499512, z: 1.0188365}
+      rotation: {x: -0.017847078, y: 0.0388577, z: 0.37475693, w: 0.9261365}
+      scale: {x: 3.2201824, y: 3.21954, z: 3.3110085}
+    - name: deco4
+      parentName: PlatingGauche
+      position: {x: -7.0121956, y: -4.1085434, z: 1.5696571}
+      rotation: {x: -0.015628776, y: 0.03976194, z: 0.36548087, w: 0.9298379}
+      scale: {x: 3.2201827, y: 3.2195387, z: 3.3110096}
+    - name: Aurora1_LeftHand
+      parentName: Aurora1_LeftForeArm
+      position: {x: -28.060154, y: 0.000017508088, z: -0.000050650888}
+      rotation: {x: 0.3628253, y: 0.47899312, z: 0.022031596, w: 0.79902315}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_LeftHandThumb1
+      parentName: Aurora1_LeftHand
+      position: {x: -5.1086955, y: 0.0000075038756, z: -0.000008769831}
+      rotation: {x: -0.19813591, y: -0.22067483, z: -0.14059949, w: 0.94460386}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_LeftHandThumb2
+      parentName: Aurora1_LeftHandThumb1
+      position: {x: -4.068842, y: -0.0000050770227, z: -0.00000095094794}
+      rotation: {x: -0.17288442, y: -0.02838599, z: 0.018584482, w: 0.9843576}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_LeftHandThumb3
+      parentName: Aurora1_LeftHandThumb2
+      position: {x: -3.3739793, y: 0.000009305048, z: -0.0000010380553}
+      rotation: {x: -0.113610595, y: -0.08005913, z: -0.065858014, w: 0.98810214}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_LeftHandThumb4
+      parentName: Aurora1_LeftHandThumb3
+      position: {x: -3.118377, y: -0.3435178, z: 0.2308181}
+      rotation: {x: 0.015385157, y: 0.037392035, z: -0.37465608, w: 0.9262818}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_LeftHandIndex1
+      parentName: Aurora1_LeftHand
+      position: {x: -6.6814647, y: -0.94759214, z: -6.968288}
+      rotation: {x: -0.3748306, y: -0.463961, z: 0.0052327085, w: 0.80262995}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_LeftHandIndex2
+      parentName: Aurora1_LeftHandIndex1
+      position: {x: -3.507752, y: 0.00000015012006, z: 0.00000088564286}
+      rotation: {x: -0.004506706, y: -0.0017668301, z: 0.04014416, w: 0.9991822}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_LeftHandIndex3
+      parentName: Aurora1_LeftHandIndex2
+      position: {x: -3.2774634, y: -0.0000016479852, z: 0.0000007414568}
+      rotation: {x: 0.046281997, y: 0.006314782, z: 0.037158195, w: 0.9982171}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_LeftHandIndex4
+      parentName: Aurora1_LeftHandIndex3
+      position: {x: -3.7247663, y: 0.0000037786115, z: -0.0000002526629}
+      rotation: {x: 0.47688955, y: 0.64046836, z: 0.35770598, w: -0.48417258}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_LeftHandMiddle1
+      parentName: Aurora1_LeftHand
+      position: {x: -4.859758, y: -2.316418, z: -7.906596}
+      rotation: {x: -0.37118247, y: -0.4659099, z: 0.0023685086, w: 0.8032098}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_LeftHandMiddle2
+      parentName: Aurora1_LeftHandMiddle1
+      position: {x: -3.7819805, y: 0.0000039546453, z: 0.00000039491627}
+      rotation: {x: -0.008098627, y: 0.00048461754, z: -0.0000633341, w: 0.9999671}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_LeftHandMiddle3
+      parentName: Aurora1_LeftHandMiddle2
+      position: {x: -3.4610596, y: -0.0000024939864, z: 0.0000006239602}
+      rotation: {x: 0.08182832, y: 0.0064052437, z: 0.03400924, w: 0.9960455}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_LeftHandMiddle4
+      parentName: Aurora1_LeftHandMiddle3
+      position: {x: -4.228072, y: 0.0000075479174, z: -0.0000024994438}
+      rotation: {x: -0.11044026, y: -0.13582057, z: -0.6166317, w: 0.76754224}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_LeftHandRing1
+      parentName: Aurora1_LeftHand
+      position: {x: -3.1218553, y: -4.162522, z: -7.710509}
+      rotation: {x: -0.3959834, y: -0.47179514, z: -0.0049625738, w: 0.7877702}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_LeftHandRing2
+      parentName: Aurora1_LeftHandRing1
+      position: {x: -3.926132, y: -0.0000017862469, z: 0.0000013233531}
+      rotation: {x: 0.0082962485, y: 0.0030222523, z: 0.03997776, w: 0.9991616}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_LeftHandRing3
+      parentName: Aurora1_LeftHandRing2
+      position: {x: -3.2208512, y: -0.0000021296817, z: 0.0000011294386}
+      rotation: {x: 0.13766219, y: 0.010528586, z: 0.033778816, w: 0.9898472}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_LeftHandRing4
+      parentName: Aurora1_LeftHandRing3
+      position: {x: -3.4023244, y: 0.0000099582985, z: -0.000003523971}
+      rotation: {x: -0.13470328, y: -0.16125228, z: -0.62234974, w: 0.75401163}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_LeftHandPinky1
+      parentName: Aurora1_LeftHand
+      position: {x: -1.4215783, y: -5.4275107, z: -7.672581}
+      rotation: {x: -0.4065973, y: -0.47402138, z: -0.012420884, w: 0.7809149}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_LeftHandPinky2
+      parentName: Aurora1_LeftHandPinky1
+      position: {x: -2.894525, y: 0.000017629896, z: -0.00000053205366}
+      rotation: {x: 0.0026545124, y: 0.001653821, z: 0.035454117, w: 0.9993664}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_LeftHandPinky3
+      parentName: Aurora1_LeftHandPinky2
+      position: {x: -2.500527, y: -0.0000025032075, z: -0.00000033734503}
+      rotation: {x: 0.038848437, y: 0.003112595, z: 0.03522335, w: 0.9986193}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_LeftHandPinky4
+      parentName: Aurora1_LeftHandPinky3
+      position: {x: -2.4035287, y: 0.0000023003, z: 0.0000003950079}
+      rotation: {x: -0.051175766, y: -0.061857335, z: -0.6303609, w: 0.7721398}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_RightShoulder
+      parentName: Aurora1_Spine2
+      position: {x: -1.9820774, y: 10.361671, z: -1.1635408}
+      rotation: {x: -0.35651943, y: 0.91415703, z: -0.09893663, w: -0.16559705}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_RightArm
+      parentName: Aurora1_RightShoulder
+      position: {x: -12.639522, y: 0.000003745954, z: -0.0000012460789}
+      rotation: {x: -0.013380439, y: -0.17520232, z: -0.08923035, w: 0.98038924}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_RightForeArm
+      parentName: Aurora1_RightArm
+      position: {x: -20.79597, y: -0.00037519337, z: -0.00077247596}
+      rotation: {x: -0.065684214, y: -0.0096327625, z: 0.001971625, w: 0.997792}
+      scale: {x: 1, y: 1, z: 1}
+    - name: platingDroit
+      parentName: Aurora1_RightForeArm
+      position: {x: -48.414158, y: -120.480804, z: -11.736528}
+      rotation: {x: 0.30421346, y: 0.9485497, z: 0.026811456, w: -0.08359919}
+      scale: {x: 1, y: 1, z: 1}
+    - name: baseDroite
+      parentName: platingDroit
+      position: {x: 46.88935, y: 119.49909, z: -3.7793698}
+      rotation: {x: 0, y: 0, z: 0.005823793, w: 0.9999831}
+      scale: {x: 1, y: 1, z: 0.97217923}
+    - name: deco
+      parentName: platingDroit
+      position: {x: 48.046585, y: 121.1015, z: -3.2743893}
+      rotation: {x: -0.017573085, y: 0.037680548, z: 0.38015896, w: 0.92398626}
+      scale: {x: 3.2195387, y: 3.2195387, z: 3.2195387}
+    - name: deco2
+      parentName: platingDroit
+      position: {x: 54.134007, y: 115.459625, z: -2.7389696}
+      rotation: {x: -0.015421152, y: 0.03857238, z: 0.37090838, w: 0.9277399}
+      scale: {x: 3.2195387, y: 3.2195387, z: 3.2195387}
+    - name: Aurora1_RightHand
+      parentName: Aurora1_RightForeArm
+      position: {x: -28.060154, y: 0.000019660334, z: 0.000048630114}
+      rotation: {x: -0.3628253, y: -0.478993, z: 0.022030886, w: 0.7990233}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_RightHandThumb1
+      parentName: Aurora1_RightHand
+      position: {x: -5.1086984, y: -0.0000021184787, z: 0.0000012262948}
+      rotation: {x: 0.19813676, y: 0.22067384, z: -0.14059563, w: 0.9446045}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_RightHandThumb2
+      parentName: Aurora1_RightHandThumb1
+      position: {x: -4.0688343, y: -0.0000053377994, z: 0.00000014704985}
+      rotation: {x: 0.1728845, y: 0.028383575, z: 0.018580943, w: 0.9843577}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_RightHandThumb3
+      parentName: Aurora1_RightHandThumb2
+      position: {x: -3.373984, y: 0.0000020902935, z: 0.0000020112711}
+      rotation: {x: 0.11353086, y: 0.029987922, z: -0.022354856, w: 0.9928302}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_RightHandThumb4
+      parentName: Aurora1_RightHandThumb3
+      position: {x: -2.7434354, y: -0.0000073122737, z: 0.0000013405177}
+      rotation: {x: 0.3688135, y: 0.92862356, z: -0.015620404, w: 0.037294373}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_RightHandIndex1
+      parentName: Aurora1_RightHand
+      position: {x: -6.681473, y: -0.9476095, z: 6.9682736}
+      rotation: {x: 0.37483138, y: 0.46396068, z: 0.005233887, w: 0.8026298}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_RightHandIndex2
+      parentName: Aurora1_RightHandIndex1
+      position: {x: -3.5077453, y: 0.000005905888, z: 0.0000030288636}
+      rotation: {x: 0.0045067365, y: 0.001766741, z: 0.04014669, w: 0.9991821}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_RightHandIndex3
+      parentName: Aurora1_RightHandIndex2
+      position: {x: -3.2774704, y: -0.0000074028394, z: 0.00000019094588}
+      rotation: {x: -0.04628205, y: -0.006315611, z: 0.03715972, w: 0.99821705}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_RightHandIndex4
+      parentName: Aurora1_RightHandIndex3
+      position: {x: -3.7247608, y: 0.000008000359, z: 0.0000044575045}
+      rotation: {x: 0.4709197, y: 0.6448555, z: -0.35648623, w: 0.4850913}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_RightHandMiddle1
+      parentName: Aurora1_RightHand
+      position: {x: -4.8597665, y: -2.3164358, z: 7.906579}
+      rotation: {x: 0.3711824, y: 0.46590948, z: 0.0023682935, w: 0.8032101}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_RightHandMiddle2
+      parentName: Aurora1_RightHandMiddle1
+      position: {x: -3.7819812, y: -0.000003792127, z: 0.0000015800458}
+      rotation: {x: 0.008098313, y: -0.00048430855, z: -0.000060992406, w: 0.9999671}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_RightHandMiddle3
+      parentName: Aurora1_RightHandMiddle2
+      position: {x: -3.4610534, y: 0.0000016101602, z: 0.0000005974541}
+      rotation: {x: -0.08182833, y: -0.0064055165, z: 0.034009717, w: 0.9960455}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_RightHandMiddle4
+      parentName: Aurora1_RightHandMiddle3
+      position: {x: -4.228079, y: 0.000000641488, z: 0.00000015319179}
+      rotation: {x: 0.5087897, y: 0.641984, z: -0.35703355, w: 0.44890612}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_RightHandRing1
+      parentName: Aurora1_RightHand
+      position: {x: -3.1218588, y: -4.162533, z: 7.7104993}
+      rotation: {x: 0.3959835, y: 0.47179478, z: -0.0049625915, w: 0.7877704}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_RightHandRing2
+      parentName: Aurora1_RightHandRing1
+      position: {x: -3.9261308, y: -0.0000082091965, z: 0.0000011918007}
+      rotation: {x: -0.00829619, y: -0.0030219846, z: 0.03998402, w: 0.9991613}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_RightHandRing3
+      parentName: Aurora1_RightHandRing2
+      position: {x: -3.2208521, y: 0.000006484355, z: 0.0000018939227}
+      rotation: {x: -0.13766228, y: -0.01052797, z: 0.03376666, w: 0.98984754}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_RightHandRing4
+      parentName: Aurora1_RightHandRing3
+      position: {x: -3.4023242, y: -0.0000031265397, z: 0.0000018541673}
+      rotation: {x: 0.5301196, y: 0.6504514, z: -0.34380037, w: 0.4215299}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_RightHandPinky1
+      parentName: Aurora1_RightHand
+      position: {x: -1.421583, y: -5.4275208, z: 7.672587}
+      rotation: {x: 0.40659404, y: 0.47402424, z: -0.012427349, w: 0.78091484}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_RightHandPinky2
+      parentName: Aurora1_RightHandPinky1
+      position: {x: -2.894522, y: -0.0000079148585, z: 0.0000006358784}
+      rotation: {x: -0.0026545124, y: -0.001653821, z: 0.035454117, w: 0.9993664}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_RightHandPinky3
+      parentName: Aurora1_RightHandPinky2
+      position: {x: -2.5005279, y: 0.000004694921, z: 0.000002097181}
+      rotation: {x: -0.038848598, y: -0.0031119538, z: 0.035220433, w: 0.99861944}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_RightHandPinky4
+      parentName: Aurora1_RightHandPinky3
+      position: {x: -2.4035234, y: 0.000003907933, z: 0.0000024773158}
+      rotation: {x: 0.47748616, y: 0.59330785, z: -0.40858898, w: 0.5030386}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_Neck
+      parentName: Aurora1_Spine2
+      position: {x: -11.069583, y: 9.014541, z: -1.8398128}
+      rotation: {x: -0.6235357, y: 0.39266166, z: -0.08934902, w: 0.6701021}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Aurora1_Head
+      parentName: Aurora1_Neck
+      position: {x: -10.851003, y: 0.000059632046, z: -0.00000066915345}
+      rotation: {x: 0.3819816, y: -0.5950547, z: 0.3819816, w: 0.5950547}
+      scale: {x: 1, y: 1, z: 1}
+    - name: masqueTotal
+      parentName: Aurora1_Head
+      position: {x: -1.5620831e-12, y: -159.69041, z: -2.8708103}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: masque
+      parentName: masqueTotal
+      position: {x: -0.0000009536743, y: 160.11269, z: 7.4657135}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: bandes_front
+      parentName: masqueTotal
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: branches_yeux
+      parentName: masqueTotal
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: base
+      parentName: branches_yeux
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: details
+      parentName: branches_yeux
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: centre
+      parentName: branches_yeux
+      position: {x: -0, y: 159.98894, z: 10.748647}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pastilles
+      parentName: masqueTotal
+      position: {x: -7.0968246, y: 165.42996, z: 7.443924}
+      rotation: {x: 0.059128128, y: -0.03635318, z: -0.091653794, w: 0.993369}
+      scale: {x: 1.1143881, y: 1.1143881, z: 1.1143881}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: Aurora1_Reference
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 6de3161a17ece3d4d93ccdae20f3896c,
+    type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 2
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
