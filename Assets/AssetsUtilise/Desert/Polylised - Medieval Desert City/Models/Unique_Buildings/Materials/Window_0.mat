@@ -21,18 +21,17 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Window_0
-  m_Shader: {fileID: 4800000, guid: 933532a4fcc9baf4fa0491de14d08ed7, type: 3}
+  m_Shader: {fileID: 4800000, guid: 6fcd7b9220c63c94a8be1c7582711bb4, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - _SPECULAR_SETUP
-  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap:
-    RenderType: Opaque
+  stringTagMap: {}
   disabledShaderPasses:
   - MOTIONVECTORS
   m_LockedProperties: 
@@ -112,15 +111,27 @@ Material:
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
+    - _FaceRenderingMode: 0
+    - _Fresnel: 0
+    - _Gloss: 1
+    - _GlossIntensity: 1
     - _GlossMapScale: 1
     - _Glossiness: 1
     - _GlossyReflections: 1
+    - _LightMaxIntensity: 0.4
+    - _MainLightShadowIntensity: 1
     - _Metallic: 0
     - _Mode: 0
+    - _ObjectType: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _Pass: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
+    - _RimBlur: 0.01
+    - _RimSize: 0
+    - _RimThreshold: 2
+    - _ShadowReceiveBlur: 0.3
     - _Smoothness: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
@@ -131,6 +142,7 @@ Material:
     - _WorkflowMode: 0
     - _ZWrite: 1
     m_Colors:
+    - _AmbientColor: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColor: {r: 0.18431368, g: 0.18431368, b: 0.18431368, a: 1}
     - _Color: {r: 0.18431365, g: 0.18431365, b: 0.18431365, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
