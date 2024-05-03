@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+// Configure une bulle de dialogue avec un fond et du texte à partir des composants SpriteRenderer et TextMeshPro.
+
 public class BulleDialogue : MonoBehaviour
 {
     private SpriteRenderer backgroundSpriteRenderer;

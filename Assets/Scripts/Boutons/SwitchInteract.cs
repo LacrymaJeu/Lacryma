@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Gère l'interaction avec des boîtes animées en inversant leur état de déplacement lorsqu'elles sont interagies.
 public class SwitchInteract : MonoBehaviour {
     // Liste des boîtes à animer
     [SerializeField] private List<GameObject> boxesToAnimate = new List<GameObject>();

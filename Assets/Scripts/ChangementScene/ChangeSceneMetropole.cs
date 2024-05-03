@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Change de scène lorsque le joueur entre dans un trigger spécifique.
+
 public class ChangeSceneMetropole : MonoBehaviour
 {
     public GameObject player; // Variable pour stocker le joueur

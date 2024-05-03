@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Permet au joueur d'interagir avec des objets dans son environnement en appuyant sur la touche E,
+// activant différentes actions en fonction des composants attachés aux objets détectés.
+
 public class PlayerInteract : MonoBehaviour
 {
     private void Update() {
@@ -66,6 +69,25 @@ public class PlayerInteract : MonoBehaviour
             }
         }
 
+            // Retourner null s'il n'y a pas d'objet SwitchInteractTemps à portée
+            return null;
+    }
+
+    public SwitchInteract GetInterationSwitch2() {
+        // distance des colliders avec lesquels le joueur peut interagir
+        float interactRange = 2f;
+
+        // Interaction avec tous les colliders autour du joueur
+        Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
+
+        // Chercher tous les colliders interactifs
+        foreach (Collider collider in colliderArray) {
+            // Vérifier si le collider possède un composant SwitchInteractTemps
+            if (collider.TryGetComponent(out SwitchInteract switchInteract)) {
+                // Retourner l'objet SwitchInteractTemps dès qu'on en trouve un
+                return switchInteract;
+            }
+        }
         // Retourner null s'il n'y a pas d'objet SwitchInteractTemps à portée
         return null;
     }

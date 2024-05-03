@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Gère l'interaction avec les boîtes animées en inversant leur état de déplacement avec un délai d'inversion et un temps de refroidissement après chaque interaction.
 public class SwitchInteractTemps : MonoBehaviour {
     // Liste de boîtes à animer
     [SerializeField] private List<GameObject> boxesToAnimate = new List<GameObject>();

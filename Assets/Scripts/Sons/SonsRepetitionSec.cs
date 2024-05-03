@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// Joue un son à des intervalles réguliers définis par nous.
+
 public class SonsRepetitionSec : MonoBehaviour
 {
     public AudioSource sons;

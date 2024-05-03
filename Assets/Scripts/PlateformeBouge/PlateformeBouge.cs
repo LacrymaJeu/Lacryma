@@ -61,7 +61,6 @@ public class PlateformeBouge : MonoBehaviour
         {
             parentTransforme.SetParent(transform); // Définition de la plateforme comme parent de l'objet
             suitObjets.Add(parentTransforme); 
-            Debug.Log("Objet entrer trigger: " + parentTransforme.name);
         }
     }
 
@@ -70,12 +69,10 @@ public class PlateformeBouge : MonoBehaviour
         Transform parentTransform = other.transform.parent; // Transform parent de l'objet sortant
         if (parentTransform != null)
         {
-            Debug.Log("Objet exit trigger: " + parentTransform.name);
 
                 foreach (Transform obj in suitObjets) // Boucle à travers tous les objets suivis
                 {
                     obj.SetParent(null); 
-                    Debug.Log("Reset parent transform pour: " + obj.name);
                 }
                 suitObjets.Clear(); // Effacer HashSet pour le nettoyage
 
