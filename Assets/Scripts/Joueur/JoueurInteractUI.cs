@@ -11,7 +11,7 @@ public class NPCInteractionUI : MonoBehaviour
 
     private void Update() {
         // Vérifie si le joueur est en train d'interagir avec un objet ou un interrupteur
-        if (joueurInteract.GetInterationObject() || joueurInteract.GetInterationSwitch() != null){
+        if (joueurInteract.GetInterationObject() || joueurInteract.GetInterationSwitch() || joueurInteract.GetInterationSwitch2() != null){
             Apparait();
         } else {
             Disparait();
