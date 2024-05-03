@@ -15,7 +15,7 @@ public class ChangeSceneMetropole : MonoBehaviour
         if (other.gameObject == player)
         {
             // Charge la scène spécifiée
-            SceneManager.LoadScene(5);
+            SceneManager.LoadScene(2);
         }
     }
 }
