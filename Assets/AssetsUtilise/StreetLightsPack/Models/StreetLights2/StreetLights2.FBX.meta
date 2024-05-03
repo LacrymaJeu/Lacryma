@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: 00e57022166972f4a948469e9a2acd86
+AssetOrigin:
+  serializedVersion: 1
+  productId: 31644
+  packageName: Street Lights Pack
+  packageVersion: V1.0
+  assetPath: Assets/StreetLightsPack/Models/StreetLights2/StreetLights2.FBX
+  uploadId: 53085
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable:
@@ -224,7 +231,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 0.05
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importPhysicalCameras: 0
@@ -294,10 +301,3 @@ ModelImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 31644
-  packageName: Street Lights Pack
-  packageVersion: V1.0
-  assetPath: Assets/StreetLightsPack/Models/StreetLights2/StreetLights2.FBX
-  uploadId: 53085
