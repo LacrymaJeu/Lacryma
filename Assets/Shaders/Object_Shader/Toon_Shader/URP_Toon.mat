@@ -17,7 +17,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2000
   stringTagMap: {}
   disabledShaderPasses: []
   m_LockedProperties: 
@@ -31,7 +31,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _DeffuseBlur: 0.005
-    - _Gloss: 0.85
+    - _Gloss: 1
     - _LightMaxIntensity: 0.4
     - _MainLightIntensity: 1
     - _MainLightShadowIntensity: 0.4
@@ -39,9 +39,9 @@ Material:
     - _ObjectType: 1
     - _Pass: 0
     - _RenderingPath: 1
-    - _RimBlur: 0
-    - _RimSize: 0
-    - _RimThreshold: 0.01
+    - _RimBlur: 0.01
+    - _RimSize: 0.2
+    - _RimThreshold: 2
     - _ShadowBlur: 0.005
     - _ShadowIntensity: 1
     - _ShadowThreshold: 0
