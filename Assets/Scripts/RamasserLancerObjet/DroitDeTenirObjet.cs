@@ -11,8 +11,11 @@ public class DroitDeTenirObjet : MonoBehaviour
     public GameObject[] objetsADesactiver; // Tableau d'objets à désactiver
     public TextMeshProUGUI texteTMP;
 
+
+    public GameObject cinematique;
     private void OnCollisionEnter(Collision other)
     {
+  
         if (other.gameObject.CompareTag("Player"))
         {
             joueur.GetComponent<JoueurRamasseLache>().enabled = true;
@@ -20,6 +23,7 @@ public class DroitDeTenirObjet : MonoBehaviour
             DesactiverObjets();
             // Affiche le texte
             StartCoroutine(AfficherEtCacherTexte());
+            cinematique.SetActive(true);
         }
     }
 
