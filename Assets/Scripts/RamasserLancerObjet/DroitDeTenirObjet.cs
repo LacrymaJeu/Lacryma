@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-// Permet le joueur de ramasser des objets après que l'objet a été ramassé et un texte apparait aussi pour 8 secondes
+// Permet le joueur de ramasser des objets après que l'objet a été ramassé et un texte apparait aussi pour 7 secondes
 
 public class DroitDeTenirObjet : MonoBehaviour
 {
@@ -52,7 +52,7 @@ public class DroitDeTenirObjet : MonoBehaviour
     IEnumerator AfficherEtCacherTexte()
     {
         texteTMP.gameObject.SetActive(true);
-        yield return new WaitForSeconds(8f);
+        yield return new WaitForSeconds(7f);
         texteTMP.gameObject.SetActive(false);
     }
 }
