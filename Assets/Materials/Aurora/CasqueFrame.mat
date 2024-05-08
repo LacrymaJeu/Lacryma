@@ -113,26 +113,26 @@ Material:
     - _ClearCoatSmoothness: 0
     - _Cull: 2
     - _Cutoff: 0.5
-    - _Depth: 29.28
+    - _Depth: 10
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
-    - _FactorInside: 1
+    - _FactorInside: 10
     - _FactorInsidePlayer: 1
-    - _FoamAmount: 1
+    - _FoamAmount: 2
     - _FoamCutoff: 2.5
     - _FoamScale: 2
     - _FoamSpeed: 0.05
-    - _Gloss: 1
+    - _Gloss: 20
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _InteractFactorInside: 10
+    - _InteractFactorInside: 5
     - _InteractTessellatedRange: 1.5
     - _Metallic: 1
-    - _NoiseNormalStrength: 0.1
+    - _NoiseNormalStrength: 0.5
     - _OcclusionStrength: 1
     - _PARTITIONING: 0
     - _Parallax: 0.005
@@ -152,19 +152,19 @@ Material:
     - _TessellatedRange: 1.5
     - _TextureBlend: 1
     - _WaterShadow: -0.65
-    - _WaveScale: 15
+    - _WaveScale: 10
     - _WaveSpeed: 0.5
     - _WaveStrength: 0.05
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _BottomColor: {r: 0, g: 0.18381491, b: 0.4811321, a: 0.4745098}
+    - _BottomColor: {r: 0.42792937, g: 0.72955966, b: 0.17206584, a: 0.4745098}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FactorEdge1: {r: 3, g: 3, b: 3, a: 0}
     - _FoamColor: {r: 1, g: 1, b: 1, a: 0.38431373}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
-    - _SurfaceColor: {r: 0.3811318, g: 0.9399606, b: 1, a: 0.2}
+    - _SurfaceColor: {r: 0.08176088, g: 0.08176088, b: 0.08176088, a: 0.2}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
