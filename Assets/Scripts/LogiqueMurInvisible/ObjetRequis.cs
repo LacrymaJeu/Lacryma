@@ -7,7 +7,7 @@ using UnityEngine;
 public class ObjetRequis : MonoBehaviour
 {
     public GameObject objetDesBandits; // Objet que les bandits veulent
-    public GameObject murInvisible; // Mur invisible à faire disparaître
+    public GameObject[] objetsAFaireDisparaitre; // Tableau des objets à faire disparaître
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,12 +15,28 @@ public class ObjetRequis : MonoBehaviour
         if (other.gameObject == objetDesBandits)
         {
             Debug.Log("L'objet des bandits est entré dans le trigger.");
-            // Fait disparaître le mur invisible
-            if (murInvisible != null)
+            // Fait disparaître tous les objets du tableau
+            if (objetsAFaireDisparaitre != null)
             {
-                murInvisible.SetActive(false);
-                Debug.Log("Le mur invisible a été désactivé.");
+                foreach (GameObject objet in objetsAFaireDisparaitre)
+                {
+                    if (objet != null)
+                    {
+                        objet.SetActive(false);
+                        Debug.Log("Un objet a été désactivé : " + objet.name);
+                        // Activer tous les enfants de chaque objet
+                        ActivateChildren(objet, true);
+                    }
+                }
             }
+        }
+    }
+
+    private void ActivateChildren(GameObject parent, bool activate)
+    {
+        foreach (Transform child in parent.transform)
+        {
+            child.gameObject.SetActive(activate);
         }
     }
 }
