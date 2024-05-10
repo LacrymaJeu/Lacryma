@@ -8,19 +8,18 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Card_GateRed
-  m_Shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
+  m_Shader: {fileID: 4800000, guid: 6fcd7b9220c63c94a8be1c7582711bb4, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - _COLORCOLOR_ON
-  m_InvalidKeywords: []
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
-  disabledShaderPasses:
-  - GRABPASS
+  disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -46,7 +45,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 70, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 6e4f20cb35dba394b9e0dc75f4fddb2a, type: 3}
+        m_Texture: {fileID: 2800000, guid: a3a6cbbd733b86a4a997f392628200fb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 70, y: 0}
     - _MetallicGlossMap:
@@ -78,15 +77,27 @@ Material:
     - _DistortionStrengthScaled: 0
     - _DstBlend: 0
     - _EmissionEnabled: 0
+    - _FaceRenderingMode: 0
     - _FlipbookMode: 0
+    - _Fresnel: 0
+    - _Gloss: 1
+    - _GlossIntensity: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _LightMaxIntensity: 0.4
     - _LightingEnabled: 0
+    - _MainLightShadowIntensity: 1
     - _Metallic: 0
     - _Mode: 0
+    - _ObjectType: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _Pass: 0
+    - _RimBlur: 0.01
+    - _RimSize: 0.2
+    - _RimThreshold: 2
+    - _ShadowReceiveBlur: 0.3
     - _SmoothnessTextureChannel: 0
     - _SoftParticlesEnabled: 0
     - _SoftParticlesFarFadeDistance: 1
@@ -96,6 +107,7 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
+    - _AmbientColor: {r: 0.70440245, g: 0.70440245, b: 0.70440245, a: 0}
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorAddSubDiff: {r: -1, g: 1, b: 0, a: 0}
