@@ -61,7 +61,7 @@ public class Player : MonoBehaviour {
                     moveDir = moveDirX;
                 } else {
                     Vector3 moveDirZ = new Vector3(0, 0, moveDir.z);
-                    canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, joueurRadius, moveDirZ, moveDistance);
+                    canMove = !Physics.CapsuleCast(transform.position, transform.position - Vector3.up * playerHeight, joueurRadius, moveDirZ, moveDistance);
 
                     if (canMove) {
                         moveDir = moveDirZ;
