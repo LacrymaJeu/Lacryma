@@ -46,7 +46,7 @@ public class PlayerAnimator : MonoBehaviour {
             animator.SetBool(DEBUT_SAUT, controleJeu.IlSaute());
 
             // Activer l'animation de milieu de saut lorsque le joueur est en l'air
-            animator.SetBool(MILIEU_SAUT, !controleJeu.ToucheSol() && controleJeu.IlSaute());
+            //animator.SetBool(MILIEU_SAUT, !controleJeu.ToucheSol() && controleJeu.IlSaute());
 
             // Activer l'animation de fin de saut lorsque le joueur touche le sol
             animator.SetBool(FIN_SAUT, controleJeu.ToucheSol());

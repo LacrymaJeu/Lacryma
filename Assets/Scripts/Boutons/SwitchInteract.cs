@@ -32,9 +32,11 @@ public class SwitchInteract : MonoBehaviour {
         // Inversion de l'état de déplacement
         moved = !moved;
 
+        boxAnimators[0].SetTrigger("Pressed");
         // Mise à jour de l'état de toutes les boîtes
         foreach (Animator animator in boxAnimators) {
             if (animator != null) {
+             
                 animator.SetBool(HAS_MOVED, moved);
             }
         }
