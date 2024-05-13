@@ -6,6 +6,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
 
+    //Variable pour le viseur
+    public GameObject viseur;
+
     // Référence au composant Rigidbody
     private Rigidbody joueurRigidbody;
 
@@ -35,6 +38,7 @@ public class Player : MonoBehaviour {
         joueurRigidbody = GetComponent<Rigidbody>();
         Cursor.lockState = CursorLockMode.Locked; // Verrouille le curseur.
         Cursor.visible = false; // Cache le curseur.
+        viseur.SetActive(true); //activer le viseur 
     }
 
     private void Update() {
