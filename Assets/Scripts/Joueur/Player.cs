@@ -43,7 +43,7 @@ public class Player : MonoBehaviour {
 
     private void Update() {
         // Vérifie si le joueur est en dialogue
-       if (peutBougerDialogue) {
+        if (peutBougerDialogue) {
             // Récupère le vecteur de déplacement normalisé du gameInput
             Vector2 inputVector = gameInput.GetMovementVectorNormalized();
 
@@ -55,7 +55,21 @@ public class Player : MonoBehaviour {
             float moveDistance = vitesseDep * Time.deltaTime;
             float joueurRadius = 0.3f;
             float playerHeight = 2f;
-            bool canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, joueurRadius, moveDir, moveDistance);
+
+            // Obtenez la hauteur totale du joueur
+            float hauteurJoueur = 2f; // Définissez ceci en fonction de la taille réelle de votre joueur
+
+            // Définissez une variable pour représenter la moitié de la hauteur du joueur
+            float demiHauteurJoueur = hauteurJoueur / 2f;
+
+            // Calculez la position de début du CapsuleCast en utilisant la variable demiHauteurJoueur
+            Vector3 positionDebut = transform.position - Vector3.up * demiHauteurJoueur; // Position de départ au bas du joueur
+
+            // Calculez la position de fin du CapsuleCast en utilisant la variable demiHauteurJoueur
+            Vector3 positionFin = transform.position + Vector3.up * demiHauteurJoueur; // Position de fin au sommet du joueur
+
+            // Utilisez positionDebut et positionFin dans votre CapsuleCast
+            bool canMove = !Physics.CapsuleCast(positionDebut, positionFin, joueurRadius, moveDir, moveDistance);
 
             // Permet de bouger diagonalement quand le personnage est bloqué par un mur
             if (!canMove) {
