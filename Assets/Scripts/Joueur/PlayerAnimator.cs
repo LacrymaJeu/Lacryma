@@ -27,14 +27,10 @@ public class PlayerAnimator : MonoBehaviour {
 
     private void Update() {
         bool estEnMouvement = player.IlMarche();
+        bool estEnCours = player.IlCours() && estEnMouvement;
 
         animator.SetBool(IL_MARCHE, estEnMouvement);
-        animator.SetBool(IL_COURS, player.IlCours()); // Utiliser la méthode IlCours du script Player
-
-
-       // if (!estEnMouvement && !controleJeu.IlSaute()) {
-         //   animator.Play(IDLE);
-       // }
+        animator.SetBool(IL_COURS, estEnCours); // Mettre à jour l'animation de course
 
         // Gérer les animations de saut
         if (controleJeu == null) {
@@ -45,15 +41,9 @@ public class PlayerAnimator : MonoBehaviour {
             // Activer l'animation de début de saut lorsque le joueur commence à sauter
             animator.SetBool(DEBUT_SAUT, controleJeu.IlSaute());
 
-            // Activer l'animation de milieu de saut lorsque le joueur est en l'air
-            //animator.SetBool(MILIEU_SAUT, !controleJeu.ToucheSol() && controleJeu.IlSaute());
-
             // Activer l'animation de fin de saut lorsque le joueur touche le sol
             animator.SetBool(FIN_SAUT, controleJeu.ToucheSol());
         }
     }
-
-
-
 
 }

@@ -53,7 +53,7 @@ public class Player : MonoBehaviour {
 
             // Applique le déplacement
             float moveDistance = vitesseDep * Time.deltaTime;
-            float joueurRadius = 0.3f;
+            float joueurRadius = 0.5f;
             float playerHeight = 2f;
 
             // Obtenez la hauteur totale du joueur
@@ -106,7 +106,7 @@ public class Player : MonoBehaviour {
 
             // Gestion de l'animation marche
             ilMarche = moveDir != Vector3.zero;
-            ilCours = vitesseDep > 5f;
+            ilCours = moveDir != Vector3.zero && vitesseDep > 5f; // Mise à jour de la condition de course
         }
     }
 
