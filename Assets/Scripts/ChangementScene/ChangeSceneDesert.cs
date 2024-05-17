@@ -15,7 +15,7 @@ public class ChangeSceneDesert : MonoBehaviour
         if (other.gameObject == player)
         {
             // Charge la scène spécifiée
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
         }
     }
 }
