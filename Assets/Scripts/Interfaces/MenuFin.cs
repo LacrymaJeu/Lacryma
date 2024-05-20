@@ -27,7 +27,7 @@ public class MenuFin : MonoBehaviour
     public void LumiereVisible()
     {
         lumiere.SetActive(true);
-        credits.SetActive(false);
+       
 
     }
 
@@ -35,5 +35,9 @@ public class MenuFin : MonoBehaviour
     public void BoutonsVisibles()
     {
         boutons.SetActive(true);
+    }
+    public void CacherCredit()
+    {
+        credits.SetActive(false);
     }
 }
