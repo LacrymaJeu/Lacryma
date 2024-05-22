@@ -19129,6 +19129,12 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 578056600}
+    - target: {fileID: 251523978296187399, guid: 2fb79ee2591ffba46b41046511295505,
+        type: 3}
+      propertyPath: dialogueStrings.Array.data[0].texte
+      value: "Si tu nous ram\xE8nes notre masque, nous allons peut-\xEAtre te laisser
+        passer..."
+      objectReference: {fileID: 0}
     - target: {fileID: 254905241188464148, guid: 2fb79ee2591ffba46b41046511295505,
         type: 3}
       propertyPath: m_Mesh
@@ -21384,6 +21390,12 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8378783448067950205, guid: 2fb79ee2591ffba46b41046511295505,
+        type: 3}
+      propertyPath: dialogueStrings.Array.data[0].texte
+      value: On dit que le temps, c'est de l'argent, mais si tu deviens pauvre, le
+        temps, c'est tout ce que tu as.
+      objectReference: {fileID: 0}
     - target: {fileID: 8379361378491094687, guid: 2fb79ee2591ffba46b41046511295505,
         type: 3}
       propertyPath: m_Mesh
@@ -23422,7 +23434,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Cependant, les ressources restes limit\xE9es et l'acc\xE8s \xE0 l'eau
+  m_text: "Cependant, les ressources restent limit\xE9es et l'acc\xE8s \xE0 l'eau
     potable reste un privil\xE8ge"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e1fcb4c9b89e44b87c40a7b94b5e33, type: 2}
@@ -23731,6 +23743,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1644317432618088897, guid: 7b95d94a95df14540af4d85b1321c2ef,
+        type: 3}
+      propertyPath: m_text
+      value: "Vous avez trouv\xE9 une pi\xE8ce d'\xE9quipement. Elle vous permet
+        de d\xE9placer des bo\xEEtes \xE0 distance. (Indice: appuie sur E devant
+        une bo\xEEte)"
+      objectReference: {fileID: 0}
     - target: {fileID: 2686348277484684850, guid: 7b95d94a95df14540af4d85b1321c2ef,
         type: 3}
       propertyPath: m_margin.z
@@ -23744,7 +23763,7 @@ PrefabInstance:
     - target: {fileID: 3924749339891036471, guid: 7b95d94a95df14540af4d85b1321c2ef,
         type: 3}
       propertyPath: m_Name
-      value: TexteCourrir
+      value: TexteCourir
       objectReference: {fileID: 0}
     - target: {fileID: 3924749339891036471, guid: 7b95d94a95df14540af4d85b1321c2ef,
         type: 3}
@@ -23754,7 +23773,7 @@ PrefabInstance:
     - target: {fileID: 4007431939246067984, guid: 7b95d94a95df14540af4d85b1321c2ef,
         type: 3}
       propertyPath: m_text
-      value: "Indice: p\xE8se shift pour courrir"
+      value: 'Indice: appuie sur shift pour courir'
       objectReference: {fileID: 0}
     - target: {fileID: 4775940407753813660, guid: 7b95d94a95df14540af4d85b1321c2ef,
         type: 3}
@@ -28849,7 +28868,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "La m\xE9tropole a \xE9t\xE9 cr\xE9\xE9 pour prot\xE9ger les survivants."
+  m_text: "La m\xE9tropole a \xE9t\xE9 cr\xE9\xE9e pour prot\xE9ger les survivants."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e1fcb4c9b89e44b87c40a7b94b5e33, type: 2}
   m_sharedMaterial: {fileID: -2166972569643840133, guid: 63e1fcb4c9b89e44b87c40a7b94b5e33,
@@ -32239,7 +32258,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Il y a tr\xE8s longtemps, nous avons \xE9puis\xE9 les ressource de la
+  m_text: "Il y a tr\xE8s longtemps, nous avons \xE9puis\xE9 les ressources de la
     plan\xE8te."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 63e1fcb4c9b89e44b87c40a7b94b5e33, type: 2}
@@ -34855,7 +34874,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc857931b49fcf64c86a68a6125677eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  messageSprint: "Indice: p\xE8se shift pour courrir"
+  messageSprint: "Indice: p\xE8se shift pour courir"
   displayTemps: 6
   messageText: {fileID: 344775703}
   playerObjet: {fileID: 6990793589706648762}
@@ -40913,17 +40932,17 @@ PrefabInstance:
     - target: {fileID: 1792977388613956763, guid: 7115e968c120388448ab488d775ca608,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.33494574
+      value: 0.3349457
       objectReference: {fileID: 0}
     - target: {fileID: 1792977388613956763, guid: 7115e968c120388448ab488d775ca608,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.057834998
+      value: 0.057834983
       objectReference: {fileID: 0}
     - target: {fileID: 1792977388613956763, guid: 7115e968c120388448ab488d775ca608,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.92674685
+      value: -0.9267469
       objectReference: {fileID: 0}
     - target: {fileID: 1792977388613956763, guid: 7115e968c120388448ab488d775ca608,
         type: 3}
@@ -41058,12 +41077,12 @@ PrefabInstance:
     - target: {fileID: 2783415695811693321, guid: 7115e968c120388448ab488d775ca608,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.33494577
+      value: 0.3349457
       objectReference: {fileID: 0}
     - target: {fileID: 2783415695811693321, guid: 7115e968c120388448ab488d775ca608,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.057834998
+      value: 0.05783499
       objectReference: {fileID: 0}
     - target: {fileID: 2783415695811693321, guid: 7115e968c120388448ab488d775ca608,
         type: 3}
