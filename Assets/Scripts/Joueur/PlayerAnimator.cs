@@ -19,10 +19,19 @@ public class PlayerAnimator : MonoBehaviour {
 
     private Vector3 dernierePosition;
 
+    // Audio variables
+    private AudioSource audioSource;
+    [SerializeField] private List<AudioClip> marcheSounds;
+    private Coroutine soundCoroutine;
+    private float marcheDelay = 0.425f;
+    private float courseDelay = 0.35f;
+    private float currentDelay;
+
     private void Awake() {
         animator = GetComponent<Animator>();
         controleJeu = GetComponent<ControleJeu>();
         dernierePosition = player.transform.position;
+        audioSource = GetComponent<AudioSource>(); // Assurez-vous qu'un AudioSource est attaché à l'objet du joueur
     }
 
     private void Update() {
@@ -31,6 +40,24 @@ public class PlayerAnimator : MonoBehaviour {
 
         animator.SetBool(IL_MARCHE, estEnMouvement);
         animator.SetBool(IL_COURS, estEnCours); // Mettre à jour l'animation de course
+
+        // Gérer les sons de marche et de course
+        if (estEnCours && (soundCoroutine == null || currentDelay != courseDelay)) {
+            if (soundCoroutine != null) {
+                StopCoroutine(soundCoroutine);
+            }
+            soundCoroutine = StartCoroutine(PlaySounds(courseDelay));
+            currentDelay = courseDelay;
+        } else if (estEnMouvement && !estEnCours && (soundCoroutine == null || currentDelay != marcheDelay)) {
+            if (soundCoroutine != null) {
+                StopCoroutine(soundCoroutine);
+            }
+            soundCoroutine = StartCoroutine(PlaySounds(marcheDelay));
+            currentDelay = marcheDelay;
+        } else if (!estEnMouvement && soundCoroutine != null) {
+            StopCoroutine(soundCoroutine);
+            soundCoroutine = null;
+        }
 
         // Gérer les animations de saut
         if (controleJeu == null) {
@@ -46,4 +73,16 @@ public class PlayerAnimator : MonoBehaviour {
         }
     }
 
+    private IEnumerator PlaySounds(float delay) {
+        while (true) {
+            // Vérifier si le joueur est au sol avant de jouer le son
+            if (controleJeu != null && controleJeu.ToucheSol()) {
+                if (audioSource != null && marcheSounds.Count > 0) {
+                    int index = Random.Range(0, marcheSounds.Count);
+                    audioSource.PlayOneShot(marcheSounds[index]);
+                }
+            }
+            yield return new WaitForSeconds(delay);
+        }
+    }
 }
