@@ -2,8 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// Contrôle la logique du joueur
-
 public class Player : MonoBehaviour {
 
     //Variable pour le viseur
@@ -30,6 +28,12 @@ public class Player : MonoBehaviour {
     // Booléen indiquant si le joueur est en mesure de bouger pendant un dialogue
     public static bool peutBougerDialogue = true;
 
+    // Hauteur totale du joueur
+    [SerializeField] private float playerHeight = 2f;
+
+    // Rayon du joueur utilisé dans le CapsuleCast
+    [SerializeField] private float joueurRadius = 0.5f;
+
     // Constantes pour les hauteurs de saut et la marge pour le saut
     private const float hauteurSaut = 2f;
     private const float margeSaut = 0.1f;
@@ -51,22 +55,14 @@ public class Player : MonoBehaviour {
             Vector3 camForward = Vector3.Scale(cam.forward, new Vector3(1, 0, 1)).normalized;
             Vector3 moveDir = camForward * inputVector.y + cam.right * inputVector.x;
 
-            // Applique le déplacement
+            // Appliquer le déplacement
             float moveDistance = vitesseDep * Time.deltaTime;
-            float joueurRadius = 0.5f;
-            float playerHeight = 2f;
 
-            // Obtenez la hauteur totale du joueur
-            float hauteurJoueur = 2f; // Définissez ceci en fonction de la taille réelle de votre joueur
+            // Calculez la position de début du CapsuleCast au niveau du joueur
+            Vector3 positionDebut = transform.position - Vector3.up * (playerHeight / 2f);
 
-            // Définissez une variable pour représenter la moitié de la hauteur du joueur
-            float demiHauteurJoueur = hauteurJoueur / 2f;
-
-            // Calculez la position de début du CapsuleCast en utilisant la variable demiHauteurJoueur
-            Vector3 positionDebut = transform.position - Vector3.up * demiHauteurJoueur; // Position de départ au bas du joueur
-
-            // Calculez la position de fin du CapsuleCast en utilisant la variable demiHauteurJoueur
-            Vector3 positionFin = transform.position + Vector3.up * demiHauteurJoueur; // Position de fin au sommet du joueur
+            // Calculez la position de fin du CapsuleCast au niveau de la tête du joueur
+            Vector3 positionFin = transform.position + Vector3.up * (playerHeight / 2f);
 
             // Utilisez positionDebut et positionFin dans votre CapsuleCast
             bool canMove = !Physics.CapsuleCast(positionDebut, positionFin, joueurRadius, moveDir, moveDistance);
@@ -74,37 +70,22 @@ public class Player : MonoBehaviour {
             // Permet de bouger diagonalement quand le personnage est bloqué par un mur
             if (!canMove) {
                 Vector3 moveDirX = new Vector3(moveDir.x, 0, 0);
-                canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, joueurRadius, moveDirX, moveDistance);
-                if (canMove) {
-                    moveDir = moveDirX;
-                } else {
-                    Vector3 moveDirZ = new Vector3(0, 0, moveDir.z);
-                    canMove = !Physics.CapsuleCast(transform.position, transform.position - Vector3.up * playerHeight, joueurRadius, moveDirZ, moveDistance);
+                Vector3 moveDirZ = new Vector3(0, 0, moveDir.z);
 
-                    if (canMove) {
-                        moveDir = moveDirZ;
-                    } else {
-                        // Vérification si le joueur peut sauter même s'il est bloqué par un mur
-                        bool canJump = Physics.Raycast(transform.position, Vector3.down, playerHeight / hauteurSaut + margeSaut);
-                        if (canJump) {
-                            moveDir = Vector3.zero;
-                        }
-                    }
-                }
+                // Le joueur essaiera d'abord de se déplacer horizontalement, puis verticalement
+                moveDir = !Physics.CapsuleCast(positionDebut, positionFin, joueurRadius, moveDirX, moveDistance) ? moveDirX : moveDirZ;
             }
 
-            // Déplace le joueur si le mouvement est autorisé
-            if (canMove) {
-                transform.position += moveDir * vitesseDep * Time.deltaTime;
-            }
+            // Déplacer le joueur si le mouvement est autorisé
+            transform.position += moveDir * vitesseDep * Time.deltaTime;
 
-            // Oriente le joueur vers la direction de la caméra
+            // Orienter le joueur vers la direction de la caméra
             if (moveDir.magnitude > 0.1f) {
                 Quaternion targetRotation = Quaternion.LookRotation(moveDir, Vector3.up);
                 transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
             }
 
-            // Gestion de l'animation marche
+            // Gestion de l'animation de marche
             ilMarche = moveDir != Vector3.zero;
             ilCours = moveDir != Vector3.zero && vitesseDep > 5f; // Mise à jour de la condition de course
         }
